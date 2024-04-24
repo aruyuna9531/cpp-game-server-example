@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/sunnet.dir/src/main.cpp.o CMakeFiles/sunnet.dir/src/service.cpp.o CMakeFiles/sunnet.dir/src/sunnet.cpp.o CMakeFiles/sunnet.dir/src/worker.cpp.o -o sunnet 
+/usr/bin/c++ CMakeFiles/sunnet.dir/src/conn_writer.cpp.o CMakeFiles/sunnet.dir/src/main.cpp.o CMakeFiles/sunnet.dir/src/service.cpp.o CMakeFiles/sunnet.dir/src/socket_worker.cpp.o CMakeFiles/sunnet.dir/src/sunnet.cpp.o CMakeFiles/sunnet.dir/src/worker.cpp.o -o sunnet  -Wl,-Bstatic -llua -Wl,-Bdynamic -ldl 

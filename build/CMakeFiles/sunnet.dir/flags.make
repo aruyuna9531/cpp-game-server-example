@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/yuna/new_cpp_server/include
+CXX_INCLUDES = -I/home/yuna/cpp_server/include
 
 CXX_FLAGS = 
 

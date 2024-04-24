@@ -3,6 +3,8 @@
 
 #include "service.h"
 #include "worker.h"
+#include "socket_worker.h"
+#include "conn.h"
 #include<vector>
 #include<memory>
 #include<unordered_map>
@@ -54,6 +56,27 @@ private:
 public:
     void CheckAndWakeUp();
     void WorkerWait();
+
+// socket worker
+private:
+    std::shared_ptr<SocketWorker> socketWorker;
+    std::shared_ptr<std::thread> socketThread;
+private:
+    void StartSocket();
+
+// connections
+private:
+    std::unordered_map<uint32_t, std::shared_ptr<Conn>> conns;
+    pthread_rwlock_t connsLock;
+public:
+    int AddConn(int fd, uint32_t id, Conn::TYPE type);
+    std::shared_ptr<Conn> GetConn(int fd);
+    bool RemoveConn(int fd);
+
+    //监听网络连接
+    int Listen(uint32_t port, uint32_t serviceId);
+    void CloseConn(uint32_t fd);
+    void ModifyEvent(int fd, bool epollOut);
 
 // test
 public:

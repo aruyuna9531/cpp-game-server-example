@@ -4,7 +4,15 @@
 #include<queue>
 #include<thread>
 #include<memory>
+#include<unordered_map>
 #include "msg.h"
+#include "conn_writer.h"
+
+extern "C" {
+    #include "lua.h"
+    #include "lauxlib.h"
+    #include "lualib.h"
+}
 
 class Service {
 public:
@@ -29,5 +37,21 @@ public:
     bool inGlobal = false;
     pthread_spinlock_t inGlobalLock;
     void SetInGlobal(bool is);
+
+private:
+    void OnServiceMsg(std::shared_ptr<ServiceMsg> msg);
+    void OnAcceptMsg(std::shared_ptr<SocketAcceptMsg> msg);
+    void OnRWMsg(std::shared_ptr<SocketRWMsg> msg);
+    void OnSocketData(int fd, const char* buff, int len);
+    void OnSocketWritable(int fd);
+    void OnSocketClose(int fd);
+
+// lua vm
+private:
+    lua_State *luaState;
+
+// test
+private:
+    std::unordered_map<int, std::shared_ptr<ConnWriter>> writers;
 };
 #endif
