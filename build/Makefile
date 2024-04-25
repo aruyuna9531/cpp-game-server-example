@@ -129,12 +129,76 @@ sunnet/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/build
 .PHONY : sunnet/fast
 
+#=============================================================================
+# Target rules for targets named lockstep
+
+# Build rule for target.
+lockstep: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lockstep
+.PHONY : lockstep
+
+# fast build rule for target.
+lockstep/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lockstep.dir/build.make CMakeFiles/lockstep.dir/build
+.PHONY : lockstep/fast
+
+#=============================================================================
+# Target rules for targets named math
+
+# Build rule for target.
+math: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 math
+.PHONY : math
+
+# fast build rule for target.
+math/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/build
+.PHONY : math/fast
+
+#=============================================================================
+# Target rules for targets named totalMain
+
+# Build rule for target.
+totalMain: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 totalMain
+.PHONY : totalMain
+
+# fast build rule for target.
+totalMain/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/build
+.PHONY : totalMain/fast
+
+lockstep/main.o: lockstep/main.cpp.o
+.PHONY : lockstep/main.o
+
+# target to build an object file
+lockstep/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lockstep.dir/build.make CMakeFiles/lockstep.dir/lockstep/main.cpp.o
+.PHONY : lockstep/main.cpp.o
+
+lockstep/main.i: lockstep/main.cpp.i
+.PHONY : lockstep/main.i
+
+# target to preprocess a source file
+lockstep/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lockstep.dir/build.make CMakeFiles/lockstep.dir/lockstep/main.cpp.i
+.PHONY : lockstep/main.cpp.i
+
+lockstep/main.s: lockstep/main.cpp.s
+.PHONY : lockstep/main.s
+
+# target to generate assembly for a file
+lockstep/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lockstep.dir/build.make CMakeFiles/lockstep.dir/lockstep/main.cpp.s
+.PHONY : lockstep/main.cpp.s
+
 lockstep/src/ikcp.o: lockstep/src/ikcp.c.o
 .PHONY : lockstep/src/ikcp.o
 
 # target to build an object file
 lockstep/src/ikcp.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lockstep.dir/build.make CMakeFiles/lockstep.dir/lockstep/src/ikcp.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/lockstep/src/ikcp.c.o
 .PHONY : lockstep/src/ikcp.c.o
 
 lockstep/src/ikcp.i: lockstep/src/ikcp.c.i
@@ -142,7 +206,8 @@ lockstep/src/ikcp.i: lockstep/src/ikcp.c.i
 
 # target to preprocess a source file
 lockstep/src/ikcp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lockstep.dir/build.make CMakeFiles/lockstep.dir/lockstep/src/ikcp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/lockstep/src/ikcp.c.i
 .PHONY : lockstep/src/ikcp.c.i
 
 lockstep/src/ikcp.s: lockstep/src/ikcp.c.s
@@ -150,15 +215,65 @@ lockstep/src/ikcp.s: lockstep/src/ikcp.c.s
 
 # target to generate assembly for a file
 lockstep/src/ikcp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lockstep.dir/build.make CMakeFiles/lockstep.dir/lockstep/src/ikcp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/lockstep/src/ikcp.c.s
 .PHONY : lockstep/src/ikcp.c.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+math/main.o: math/main.cpp.o
+.PHONY : math/main.o
+
+# target to build an object file
+math/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/main.cpp.o
+.PHONY : math/main.cpp.o
+
+math/main.i: math/main.cpp.i
+.PHONY : math/main.i
+
+# target to preprocess a source file
+math/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/main.cpp.i
+.PHONY : math/main.cpp.i
+
+math/main.s: math/main.cpp.s
+.PHONY : math/main.s
+
+# target to generate assembly for a file
+math/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/main.cpp.s
+.PHONY : math/main.cpp.s
 
 math/src/euler_angles.o: math/src/euler_angles.cpp.o
 .PHONY : math/src/euler_angles.o
 
 # target to build an object file
 math/src/euler_angles.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/euler_angles.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/euler_angles.cpp.o
 .PHONY : math/src/euler_angles.cpp.o
 
 math/src/euler_angles.i: math/src/euler_angles.cpp.i
@@ -166,7 +281,8 @@ math/src/euler_angles.i: math/src/euler_angles.cpp.i
 
 # target to preprocess a source file
 math/src/euler_angles.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/euler_angles.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/euler_angles.cpp.i
 .PHONY : math/src/euler_angles.cpp.i
 
 math/src/euler_angles.s: math/src/euler_angles.cpp.s
@@ -174,7 +290,8 @@ math/src/euler_angles.s: math/src/euler_angles.cpp.s
 
 # target to generate assembly for a file
 math/src/euler_angles.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/euler_angles.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/euler_angles.cpp.s
 .PHONY : math/src/euler_angles.cpp.s
 
 math/src/math_util.o: math/src/math_util.cpp.o
@@ -182,7 +299,8 @@ math/src/math_util.o: math/src/math_util.cpp.o
 
 # target to build an object file
 math/src/math_util.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/math_util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/math_util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/math_util.cpp.o
 .PHONY : math/src/math_util.cpp.o
 
 math/src/math_util.i: math/src/math_util.cpp.i
@@ -190,7 +308,8 @@ math/src/math_util.i: math/src/math_util.cpp.i
 
 # target to preprocess a source file
 math/src/math_util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/math_util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/math_util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/math_util.cpp.i
 .PHONY : math/src/math_util.cpp.i
 
 math/src/math_util.s: math/src/math_util.cpp.s
@@ -198,7 +317,8 @@ math/src/math_util.s: math/src/math_util.cpp.s
 
 # target to generate assembly for a file
 math/src/math_util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/math_util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/math_util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/math_util.cpp.s
 .PHONY : math/src/math_util.cpp.s
 
 math/src/matrix4x3.o: math/src/matrix4x3.cpp.o
@@ -206,7 +326,8 @@ math/src/matrix4x3.o: math/src/matrix4x3.cpp.o
 
 # target to build an object file
 math/src/matrix4x3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/matrix4x3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/matrix4x3.cpp.o
 .PHONY : math/src/matrix4x3.cpp.o
 
 math/src/matrix4x3.i: math/src/matrix4x3.cpp.i
@@ -214,7 +335,8 @@ math/src/matrix4x3.i: math/src/matrix4x3.cpp.i
 
 # target to preprocess a source file
 math/src/matrix4x3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/matrix4x3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/matrix4x3.cpp.i
 .PHONY : math/src/matrix4x3.cpp.i
 
 math/src/matrix4x3.s: math/src/matrix4x3.cpp.s
@@ -222,7 +344,8 @@ math/src/matrix4x3.s: math/src/matrix4x3.cpp.s
 
 # target to generate assembly for a file
 math/src/matrix4x3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/matrix4x3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/matrix4x3.cpp.s
 .PHONY : math/src/matrix4x3.cpp.s
 
 math/src/quaternion.o: math/src/quaternion.cpp.o
@@ -230,7 +353,8 @@ math/src/quaternion.o: math/src/quaternion.cpp.o
 
 # target to build an object file
 math/src/quaternion.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/quaternion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/quaternion.cpp.o
 .PHONY : math/src/quaternion.cpp.o
 
 math/src/quaternion.i: math/src/quaternion.cpp.i
@@ -238,7 +362,8 @@ math/src/quaternion.i: math/src/quaternion.cpp.i
 
 # target to preprocess a source file
 math/src/quaternion.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/quaternion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/quaternion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/quaternion.cpp.i
 .PHONY : math/src/quaternion.cpp.i
 
 math/src/quaternion.s: math/src/quaternion.cpp.s
@@ -246,7 +371,8 @@ math/src/quaternion.s: math/src/quaternion.cpp.s
 
 # target to generate assembly for a file
 math/src/quaternion.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/quaternion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/quaternion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/quaternion.cpp.s
 .PHONY : math/src/quaternion.cpp.s
 
 math/src/rotation_matrix.o: math/src/rotation_matrix.cpp.o
@@ -254,7 +380,8 @@ math/src/rotation_matrix.o: math/src/rotation_matrix.cpp.o
 
 # target to build an object file
 math/src/rotation_matrix.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/rotation_matrix.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/rotation_matrix.cpp.o
 .PHONY : math/src/rotation_matrix.cpp.o
 
 math/src/rotation_matrix.i: math/src/rotation_matrix.cpp.i
@@ -262,7 +389,8 @@ math/src/rotation_matrix.i: math/src/rotation_matrix.cpp.i
 
 # target to preprocess a source file
 math/src/rotation_matrix.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/rotation_matrix.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/rotation_matrix.cpp.i
 .PHONY : math/src/rotation_matrix.cpp.i
 
 math/src/rotation_matrix.s: math/src/rotation_matrix.cpp.s
@@ -270,7 +398,8 @@ math/src/rotation_matrix.s: math/src/rotation_matrix.cpp.s
 
 # target to generate assembly for a file
 math/src/rotation_matrix.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/rotation_matrix.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/rotation_matrix.cpp.s
 .PHONY : math/src/rotation_matrix.cpp.s
 
 math/src/vector_num_type.o: math/src/vector_num_type.cpp.o
@@ -278,7 +407,8 @@ math/src/vector_num_type.o: math/src/vector_num_type.cpp.o
 
 # target to build an object file
 math/src/vector_num_type.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/vector_num_type.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/vector_num_type.cpp.o
 .PHONY : math/src/vector_num_type.cpp.o
 
 math/src/vector_num_type.i: math/src/vector_num_type.cpp.i
@@ -286,7 +416,8 @@ math/src/vector_num_type.i: math/src/vector_num_type.cpp.i
 
 # target to preprocess a source file
 math/src/vector_num_type.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/vector_num_type.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/vector_num_type.cpp.i
 .PHONY : math/src/vector_num_type.cpp.i
 
 math/src/vector_num_type.s: math/src/vector_num_type.cpp.s
@@ -294,8 +425,33 @@ math/src/vector_num_type.s: math/src/vector_num_type.cpp.s
 
 # target to generate assembly for a file
 math/src/vector_num_type.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/vector_num_type.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/vector_num_type.cpp.s
 .PHONY : math/src/vector_num_type.cpp.s
+
+net_base/main.o: net_base/main.cpp.o
+.PHONY : net_base/main.o
+
+# target to build an object file
+net_base/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/main.cpp.o
+.PHONY : net_base/main.cpp.o
+
+net_base/main.i: net_base/main.cpp.i
+.PHONY : net_base/main.i
+
+# target to preprocess a source file
+net_base/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/main.cpp.i
+.PHONY : net_base/main.cpp.i
+
+net_base/main.s: net_base/main.cpp.s
+.PHONY : net_base/main.s
+
+# target to generate assembly for a file
+net_base/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/main.cpp.s
+.PHONY : net_base/main.cpp.s
 
 net_base/src/conn_writer.o: net_base/src/conn_writer.cpp.o
 .PHONY : net_base/src/conn_writer.o
@@ -303,6 +459,7 @@ net_base/src/conn_writer.o: net_base/src/conn_writer.cpp.o
 # target to build an object file
 net_base/src/conn_writer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/conn_writer.cpp.o
 .PHONY : net_base/src/conn_writer.cpp.o
 
 net_base/src/conn_writer.i: net_base/src/conn_writer.cpp.i
@@ -311,6 +468,7 @@ net_base/src/conn_writer.i: net_base/src/conn_writer.cpp.i
 # target to preprocess a source file
 net_base/src/conn_writer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/conn_writer.cpp.i
 .PHONY : net_base/src/conn_writer.cpp.i
 
 net_base/src/conn_writer.s: net_base/src/conn_writer.cpp.s
@@ -319,31 +477,8 @@ net_base/src/conn_writer.s: net_base/src/conn_writer.cpp.s
 # target to generate assembly for a file
 net_base/src/conn_writer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/conn_writer.cpp.s
 .PHONY : net_base/src/conn_writer.cpp.s
-
-net_base/src/main.o: net_base/src/main.cpp.o
-.PHONY : net_base/src/main.o
-
-# target to build an object file
-net_base/src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/main.cpp.o
-.PHONY : net_base/src/main.cpp.o
-
-net_base/src/main.i: net_base/src/main.cpp.i
-.PHONY : net_base/src/main.i
-
-# target to preprocess a source file
-net_base/src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/main.cpp.i
-.PHONY : net_base/src/main.cpp.i
-
-net_base/src/main.s: net_base/src/main.cpp.s
-.PHONY : net_base/src/main.s
-
-# target to generate assembly for a file
-net_base/src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/main.cpp.s
-.PHONY : net_base/src/main.cpp.s
 
 net_base/src/service.o: net_base/src/service.cpp.o
 .PHONY : net_base/src/service.o
@@ -351,6 +486,7 @@ net_base/src/service.o: net_base/src/service.cpp.o
 # target to build an object file
 net_base/src/service.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/service.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/service.cpp.o
 .PHONY : net_base/src/service.cpp.o
 
 net_base/src/service.i: net_base/src/service.cpp.i
@@ -359,6 +495,7 @@ net_base/src/service.i: net_base/src/service.cpp.i
 # target to preprocess a source file
 net_base/src/service.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/service.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/service.cpp.i
 .PHONY : net_base/src/service.cpp.i
 
 net_base/src/service.s: net_base/src/service.cpp.s
@@ -367,6 +504,7 @@ net_base/src/service.s: net_base/src/service.cpp.s
 # target to generate assembly for a file
 net_base/src/service.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/service.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/service.cpp.s
 .PHONY : net_base/src/service.cpp.s
 
 net_base/src/socket_worker.o: net_base/src/socket_worker.cpp.o
@@ -375,6 +513,7 @@ net_base/src/socket_worker.o: net_base/src/socket_worker.cpp.o
 # target to build an object file
 net_base/src/socket_worker.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/socket_worker.cpp.o
 .PHONY : net_base/src/socket_worker.cpp.o
 
 net_base/src/socket_worker.i: net_base/src/socket_worker.cpp.i
@@ -383,6 +522,7 @@ net_base/src/socket_worker.i: net_base/src/socket_worker.cpp.i
 # target to preprocess a source file
 net_base/src/socket_worker.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/socket_worker.cpp.i
 .PHONY : net_base/src/socket_worker.cpp.i
 
 net_base/src/socket_worker.s: net_base/src/socket_worker.cpp.s
@@ -391,6 +531,7 @@ net_base/src/socket_worker.s: net_base/src/socket_worker.cpp.s
 # target to generate assembly for a file
 net_base/src/socket_worker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/socket_worker.cpp.s
 .PHONY : net_base/src/socket_worker.cpp.s
 
 net_base/src/sunnet.o: net_base/src/sunnet.cpp.o
@@ -399,6 +540,7 @@ net_base/src/sunnet.o: net_base/src/sunnet.cpp.o
 # target to build an object file
 net_base/src/sunnet.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/sunnet.cpp.o
 .PHONY : net_base/src/sunnet.cpp.o
 
 net_base/src/sunnet.i: net_base/src/sunnet.cpp.i
@@ -407,6 +549,7 @@ net_base/src/sunnet.i: net_base/src/sunnet.cpp.i
 # target to preprocess a source file
 net_base/src/sunnet.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/sunnet.cpp.i
 .PHONY : net_base/src/sunnet.cpp.i
 
 net_base/src/sunnet.s: net_base/src/sunnet.cpp.s
@@ -415,6 +558,7 @@ net_base/src/sunnet.s: net_base/src/sunnet.cpp.s
 # target to generate assembly for a file
 net_base/src/sunnet.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/sunnet.cpp.s
 .PHONY : net_base/src/sunnet.cpp.s
 
 net_base/src/worker.o: net_base/src/worker.cpp.o
@@ -423,6 +567,7 @@ net_base/src/worker.o: net_base/src/worker.cpp.o
 # target to build an object file
 net_base/src/worker.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/worker.cpp.o
 .PHONY : net_base/src/worker.cpp.o
 
 net_base/src/worker.i: net_base/src/worker.cpp.i
@@ -431,6 +576,7 @@ net_base/src/worker.i: net_base/src/worker.cpp.i
 # target to preprocess a source file
 net_base/src/worker.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/worker.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/worker.cpp.i
 .PHONY : net_base/src/worker.cpp.i
 
 net_base/src/worker.s: net_base/src/worker.cpp.s
@@ -439,6 +585,7 @@ net_base/src/worker.s: net_base/src/worker.cpp.s
 # target to generate assembly for a file
 net_base/src/worker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/net_base/src/worker.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/net_base/src/worker.cpp.s
 .PHONY : net_base/src/worker.cpp.s
 
 # Help Target
@@ -449,10 +596,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... lockstep"
+	@echo "... math"
 	@echo "... sunnet"
+	@echo "... totalMain"
+	@echo "... lockstep/main.o"
+	@echo "... lockstep/main.i"
+	@echo "... lockstep/main.s"
 	@echo "... lockstep/src/ikcp.o"
 	@echo "... lockstep/src/ikcp.i"
 	@echo "... lockstep/src/ikcp.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... math/main.o"
+	@echo "... math/main.i"
+	@echo "... math/main.s"
 	@echo "... math/src/euler_angles.o"
 	@echo "... math/src/euler_angles.i"
 	@echo "... math/src/euler_angles.s"
@@ -471,12 +630,12 @@ help:
 	@echo "... math/src/vector_num_type.o"
 	@echo "... math/src/vector_num_type.i"
 	@echo "... math/src/vector_num_type.s"
+	@echo "... net_base/main.o"
+	@echo "... net_base/main.i"
+	@echo "... net_base/main.s"
 	@echo "... net_base/src/conn_writer.o"
 	@echo "... net_base/src/conn_writer.i"
 	@echo "... net_base/src/conn_writer.s"
-	@echo "... net_base/src/main.o"
-	@echo "... net_base/src/main.i"
-	@echo "... net_base/src/main.s"
 	@echo "... net_base/src/service.o"
 	@echo "... net_base/src/service.i"
 	@echo "... net_base/src/service.s"

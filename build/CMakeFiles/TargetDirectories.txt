@@ -1,3 +1,6 @@
 /home/yuna/cpp_server/build/CMakeFiles/sunnet.dir
+/home/yuna/cpp_server/build/CMakeFiles/lockstep.dir
+/home/yuna/cpp_server/build/CMakeFiles/math.dir
+/home/yuna/cpp_server/build/CMakeFiles/totalMain.dir
 /home/yuna/cpp_server/build/CMakeFiles/edit_cache.dir
 /home/yuna/cpp_server/build/CMakeFiles/rebuild_cache.dir
