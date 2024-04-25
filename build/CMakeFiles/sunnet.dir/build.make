@@ -69,111 +69,223 @@ include CMakeFiles/sunnet.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sunnet.dir/flags.make
 
-CMakeFiles/sunnet.dir/src/conn_writer.cpp.o: CMakeFiles/sunnet.dir/flags.make
-CMakeFiles/sunnet.dir/src/conn_writer.cpp.o: ../src/conn_writer.cpp
-CMakeFiles/sunnet.dir/src/conn_writer.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sunnet.dir/src/conn_writer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/src/conn_writer.cpp.o -MF CMakeFiles/sunnet.dir/src/conn_writer.cpp.o.d -o CMakeFiles/sunnet.dir/src/conn_writer.cpp.o -c /home/yuna/cpp_server/src/conn_writer.cpp
+CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o: ../net_base/src/conn_writer.cpp
+CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o -MF CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o.d -o CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o -c /home/yuna/cpp_server/net_base/src/conn_writer.cpp
 
-CMakeFiles/sunnet.dir/src/conn_writer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/src/conn_writer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/src/conn_writer.cpp > CMakeFiles/sunnet.dir/src/conn_writer.cpp.i
+CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/net_base/src/conn_writer.cpp > CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.i
 
-CMakeFiles/sunnet.dir/src/conn_writer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/src/conn_writer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/src/conn_writer.cpp -o CMakeFiles/sunnet.dir/src/conn_writer.cpp.s
+CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/net_base/src/conn_writer.cpp -o CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.s
 
-CMakeFiles/sunnet.dir/src/main.cpp.o: CMakeFiles/sunnet.dir/flags.make
-CMakeFiles/sunnet.dir/src/main.cpp.o: ../src/main.cpp
-CMakeFiles/sunnet.dir/src/main.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sunnet.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/src/main.cpp.o -MF CMakeFiles/sunnet.dir/src/main.cpp.o.d -o CMakeFiles/sunnet.dir/src/main.cpp.o -c /home/yuna/cpp_server/src/main.cpp
+CMakeFiles/sunnet.dir/net_base/src/main.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/net_base/src/main.cpp.o: ../net_base/src/main.cpp
+CMakeFiles/sunnet.dir/net_base/src/main.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sunnet.dir/net_base/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/net_base/src/main.cpp.o -MF CMakeFiles/sunnet.dir/net_base/src/main.cpp.o.d -o CMakeFiles/sunnet.dir/net_base/src/main.cpp.o -c /home/yuna/cpp_server/net_base/src/main.cpp
 
-CMakeFiles/sunnet.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/src/main.cpp > CMakeFiles/sunnet.dir/src/main.cpp.i
+CMakeFiles/sunnet.dir/net_base/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/net_base/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/net_base/src/main.cpp > CMakeFiles/sunnet.dir/net_base/src/main.cpp.i
 
-CMakeFiles/sunnet.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/src/main.cpp -o CMakeFiles/sunnet.dir/src/main.cpp.s
+CMakeFiles/sunnet.dir/net_base/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/net_base/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/net_base/src/main.cpp -o CMakeFiles/sunnet.dir/net_base/src/main.cpp.s
 
-CMakeFiles/sunnet.dir/src/service.cpp.o: CMakeFiles/sunnet.dir/flags.make
-CMakeFiles/sunnet.dir/src/service.cpp.o: ../src/service.cpp
-CMakeFiles/sunnet.dir/src/service.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sunnet.dir/src/service.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/src/service.cpp.o -MF CMakeFiles/sunnet.dir/src/service.cpp.o.d -o CMakeFiles/sunnet.dir/src/service.cpp.o -c /home/yuna/cpp_server/src/service.cpp
+CMakeFiles/sunnet.dir/net_base/src/service.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/net_base/src/service.cpp.o: ../net_base/src/service.cpp
+CMakeFiles/sunnet.dir/net_base/src/service.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sunnet.dir/net_base/src/service.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/net_base/src/service.cpp.o -MF CMakeFiles/sunnet.dir/net_base/src/service.cpp.o.d -o CMakeFiles/sunnet.dir/net_base/src/service.cpp.o -c /home/yuna/cpp_server/net_base/src/service.cpp
 
-CMakeFiles/sunnet.dir/src/service.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/src/service.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/src/service.cpp > CMakeFiles/sunnet.dir/src/service.cpp.i
+CMakeFiles/sunnet.dir/net_base/src/service.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/net_base/src/service.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/net_base/src/service.cpp > CMakeFiles/sunnet.dir/net_base/src/service.cpp.i
 
-CMakeFiles/sunnet.dir/src/service.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/src/service.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/src/service.cpp -o CMakeFiles/sunnet.dir/src/service.cpp.s
+CMakeFiles/sunnet.dir/net_base/src/service.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/net_base/src/service.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/net_base/src/service.cpp -o CMakeFiles/sunnet.dir/net_base/src/service.cpp.s
 
-CMakeFiles/sunnet.dir/src/socket_worker.cpp.o: CMakeFiles/sunnet.dir/flags.make
-CMakeFiles/sunnet.dir/src/socket_worker.cpp.o: ../src/socket_worker.cpp
-CMakeFiles/sunnet.dir/src/socket_worker.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sunnet.dir/src/socket_worker.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/src/socket_worker.cpp.o -MF CMakeFiles/sunnet.dir/src/socket_worker.cpp.o.d -o CMakeFiles/sunnet.dir/src/socket_worker.cpp.o -c /home/yuna/cpp_server/src/socket_worker.cpp
+CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o: ../net_base/src/socket_worker.cpp
+CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o -MF CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o.d -o CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o -c /home/yuna/cpp_server/net_base/src/socket_worker.cpp
 
-CMakeFiles/sunnet.dir/src/socket_worker.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/src/socket_worker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/src/socket_worker.cpp > CMakeFiles/sunnet.dir/src/socket_worker.cpp.i
+CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/net_base/src/socket_worker.cpp > CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.i
 
-CMakeFiles/sunnet.dir/src/socket_worker.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/src/socket_worker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/src/socket_worker.cpp -o CMakeFiles/sunnet.dir/src/socket_worker.cpp.s
+CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/net_base/src/socket_worker.cpp -o CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.s
 
-CMakeFiles/sunnet.dir/src/sunnet.cpp.o: CMakeFiles/sunnet.dir/flags.make
-CMakeFiles/sunnet.dir/src/sunnet.cpp.o: ../src/sunnet.cpp
-CMakeFiles/sunnet.dir/src/sunnet.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sunnet.dir/src/sunnet.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/src/sunnet.cpp.o -MF CMakeFiles/sunnet.dir/src/sunnet.cpp.o.d -o CMakeFiles/sunnet.dir/src/sunnet.cpp.o -c /home/yuna/cpp_server/src/sunnet.cpp
+CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o: ../net_base/src/sunnet.cpp
+CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o -MF CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o.d -o CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o -c /home/yuna/cpp_server/net_base/src/sunnet.cpp
 
-CMakeFiles/sunnet.dir/src/sunnet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/src/sunnet.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/src/sunnet.cpp > CMakeFiles/sunnet.dir/src/sunnet.cpp.i
+CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/net_base/src/sunnet.cpp > CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.i
 
-CMakeFiles/sunnet.dir/src/sunnet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/src/sunnet.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/src/sunnet.cpp -o CMakeFiles/sunnet.dir/src/sunnet.cpp.s
+CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/net_base/src/sunnet.cpp -o CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.s
 
-CMakeFiles/sunnet.dir/src/worker.cpp.o: CMakeFiles/sunnet.dir/flags.make
-CMakeFiles/sunnet.dir/src/worker.cpp.o: ../src/worker.cpp
-CMakeFiles/sunnet.dir/src/worker.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sunnet.dir/src/worker.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/src/worker.cpp.o -MF CMakeFiles/sunnet.dir/src/worker.cpp.o.d -o CMakeFiles/sunnet.dir/src/worker.cpp.o -c /home/yuna/cpp_server/src/worker.cpp
+CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o: ../net_base/src/worker.cpp
+CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o -MF CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o.d -o CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o -c /home/yuna/cpp_server/net_base/src/worker.cpp
 
-CMakeFiles/sunnet.dir/src/worker.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/src/worker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/src/worker.cpp > CMakeFiles/sunnet.dir/src/worker.cpp.i
+CMakeFiles/sunnet.dir/net_base/src/worker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/net_base/src/worker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/net_base/src/worker.cpp > CMakeFiles/sunnet.dir/net_base/src/worker.cpp.i
 
-CMakeFiles/sunnet.dir/src/worker.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/src/worker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/src/worker.cpp -o CMakeFiles/sunnet.dir/src/worker.cpp.s
+CMakeFiles/sunnet.dir/net_base/src/worker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/net_base/src/worker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/net_base/src/worker.cpp -o CMakeFiles/sunnet.dir/net_base/src/worker.cpp.s
+
+CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o: ../lockstep/src/ikcp.c
+CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o -MF CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o.d -o CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o -c /home/yuna/cpp_server/lockstep/src/ikcp.c
+
+CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/yuna/cpp_server/lockstep/src/ikcp.c > CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.i
+
+CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/yuna/cpp_server/lockstep/src/ikcp.c -o CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.s
+
+CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o: ../math/src/euler_angles.cpp
+CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o -MF CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o.d -o CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o -c /home/yuna/cpp_server/math/src/euler_angles.cpp
+
+CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/math/src/euler_angles.cpp > CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.i
+
+CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/math/src/euler_angles.cpp -o CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.s
+
+CMakeFiles/sunnet.dir/math/src/math_util.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/math/src/math_util.cpp.o: ../math/src/math_util.cpp
+CMakeFiles/sunnet.dir/math/src/math_util.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sunnet.dir/math/src/math_util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/math/src/math_util.cpp.o -MF CMakeFiles/sunnet.dir/math/src/math_util.cpp.o.d -o CMakeFiles/sunnet.dir/math/src/math_util.cpp.o -c /home/yuna/cpp_server/math/src/math_util.cpp
+
+CMakeFiles/sunnet.dir/math/src/math_util.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/math/src/math_util.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/math/src/math_util.cpp > CMakeFiles/sunnet.dir/math/src/math_util.cpp.i
+
+CMakeFiles/sunnet.dir/math/src/math_util.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/math/src/math_util.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/math/src/math_util.cpp -o CMakeFiles/sunnet.dir/math/src/math_util.cpp.s
+
+CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o: ../math/src/matrix4x3.cpp
+CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o -MF CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o.d -o CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o -c /home/yuna/cpp_server/math/src/matrix4x3.cpp
+
+CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/math/src/matrix4x3.cpp > CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.i
+
+CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/math/src/matrix4x3.cpp -o CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.s
+
+CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o: ../math/src/quaternion.cpp
+CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o -MF CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o.d -o CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o -c /home/yuna/cpp_server/math/src/quaternion.cpp
+
+CMakeFiles/sunnet.dir/math/src/quaternion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/math/src/quaternion.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/math/src/quaternion.cpp > CMakeFiles/sunnet.dir/math/src/quaternion.cpp.i
+
+CMakeFiles/sunnet.dir/math/src/quaternion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/math/src/quaternion.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/math/src/quaternion.cpp -o CMakeFiles/sunnet.dir/math/src/quaternion.cpp.s
+
+CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o: ../math/src/rotation_matrix.cpp
+CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o -MF CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o.d -o CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o -c /home/yuna/cpp_server/math/src/rotation_matrix.cpp
+
+CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/math/src/rotation_matrix.cpp > CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.i
+
+CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/math/src/rotation_matrix.cpp -o CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.s
+
+CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o: CMakeFiles/sunnet.dir/flags.make
+CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o: ../math/src/vector_num_type.cpp
+CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o: CMakeFiles/sunnet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o -MF CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o.d -o CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o -c /home/yuna/cpp_server/math/src/vector_num_type.cpp
+
+CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuna/cpp_server/math/src/vector_num_type.cpp > CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.i
+
+CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuna/cpp_server/math/src/vector_num_type.cpp -o CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.s
 
 # Object files for target sunnet
 sunnet_OBJECTS = \
-"CMakeFiles/sunnet.dir/src/conn_writer.cpp.o" \
-"CMakeFiles/sunnet.dir/src/main.cpp.o" \
-"CMakeFiles/sunnet.dir/src/service.cpp.o" \
-"CMakeFiles/sunnet.dir/src/socket_worker.cpp.o" \
-"CMakeFiles/sunnet.dir/src/sunnet.cpp.o" \
-"CMakeFiles/sunnet.dir/src/worker.cpp.o"
+"CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o" \
+"CMakeFiles/sunnet.dir/net_base/src/main.cpp.o" \
+"CMakeFiles/sunnet.dir/net_base/src/service.cpp.o" \
+"CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o" \
+"CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o" \
+"CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o" \
+"CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o" \
+"CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o" \
+"CMakeFiles/sunnet.dir/math/src/math_util.cpp.o" \
+"CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o" \
+"CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o" \
+"CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o" \
+"CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o"
 
 # External object files for target sunnet
 sunnet_EXTERNAL_OBJECTS =
 
-sunnet: CMakeFiles/sunnet.dir/src/conn_writer.cpp.o
-sunnet: CMakeFiles/sunnet.dir/src/main.cpp.o
-sunnet: CMakeFiles/sunnet.dir/src/service.cpp.o
-sunnet: CMakeFiles/sunnet.dir/src/socket_worker.cpp.o
-sunnet: CMakeFiles/sunnet.dir/src/sunnet.cpp.o
-sunnet: CMakeFiles/sunnet.dir/src/worker.cpp.o
+sunnet: CMakeFiles/sunnet.dir/net_base/src/conn_writer.cpp.o
+sunnet: CMakeFiles/sunnet.dir/net_base/src/main.cpp.o
+sunnet: CMakeFiles/sunnet.dir/net_base/src/service.cpp.o
+sunnet: CMakeFiles/sunnet.dir/net_base/src/socket_worker.cpp.o
+sunnet: CMakeFiles/sunnet.dir/net_base/src/sunnet.cpp.o
+sunnet: CMakeFiles/sunnet.dir/net_base/src/worker.cpp.o
+sunnet: CMakeFiles/sunnet.dir/lockstep/src/ikcp.c.o
+sunnet: CMakeFiles/sunnet.dir/math/src/euler_angles.cpp.o
+sunnet: CMakeFiles/sunnet.dir/math/src/math_util.cpp.o
+sunnet: CMakeFiles/sunnet.dir/math/src/matrix4x3.cpp.o
+sunnet: CMakeFiles/sunnet.dir/math/src/quaternion.cpp.o
+sunnet: CMakeFiles/sunnet.dir/math/src/rotation_matrix.cpp.o
+sunnet: CMakeFiles/sunnet.dir/math/src/vector_num_type.cpp.o
 sunnet: CMakeFiles/sunnet.dir/build.make
 sunnet: CMakeFiles/sunnet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable sunnet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable sunnet"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sunnet.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

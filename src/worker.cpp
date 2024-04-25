@@ -10,11 +10,11 @@ void Worker::operator()() {
         if (!srv) {
             // 线程休眠，等待唤醒
             std::cout << "worker " << this->id << " cannot get message, sleep" << std::endl;
-            Sunnet::GetInst()->WorkerWait();
+            Sunnet::GetInst()->WorkerWait();        // worker等消息（cv阻塞）
         } else {
             // 直接处理消息
             srv->ProcessMsgs(eachNum);
-            CheckAndPutGlobal(srv); // 判断服务是否还有未处理消息，有的话放回全局队列。
+            CheckAndPutGlobal(srv); // 判断服务是否还有未处理消息，有的话保持service在全局队列
         }
     }
 }

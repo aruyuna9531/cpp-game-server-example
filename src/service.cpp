@@ -52,7 +52,7 @@ void Service::OnMsg(std::shared_ptr<BaseMsg> msg) {
     switch (msg->type) {
         case BaseMsg::TYPE::SERVICE:
         {
-            std::shared_ptr<ServiceMsg> m = std::dynamic_pointer_cast<ServiceMsg>(msg);
+            std::shared_ptr<ServiceMsg> m = std::dynamic_pointer_cast<ServiceMsg>(msg); // dynamic_pointer_cast类似裸指针的dynamic_cast（或者go的点反射），shared_ptr特有
             OnServiceMsg(m);
             break;
         }
@@ -142,7 +142,7 @@ void Service::OnRWMsg(std::shared_ptr<SocketRWMsg> msg) {
 }
 void Service::OnSocketData(int fd, const char* buff, int len) {
     std::cout << "OnSocketData fd = " << fd << " buff: " << buff << std::endl;
-    // char* writeBuff = new char[4200000]{0};
+    // char* writeBuff = new char[4200000]{0};      // 这里一定是new的，否则会double free宕机，下面要被shared_ptr包起来，回忆下智能指针包裸指针的问题
     // writeBuff[4199998] = 'e';
     // int r = write(fd, &writeBuff, sizeof(writeBuff));
     // std::cout << "write r: " << r << " " << strerror(errno) << std::endl;
