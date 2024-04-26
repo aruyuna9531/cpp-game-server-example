@@ -32,6 +32,10 @@ extern _vectorNumType operator-(double f, const _vectorNumType& v);
 extern _vectorNumType operator*(double f, const _vectorNumType& v);
 extern _vectorNumType operator/(double f, const _vectorNumType& v);
 
+extern _vectorNumType max(const _vectorNumType& a, const _vectorNumType& b);
+extern _vectorNumType min(const _vectorNumType& a, const _vectorNumType& b);
+extern void swap(_vectorNumType& a, _vectorNumType& b);
+
 extern _vectorNumType sqrt(const _vectorNumType& x);
 extern _vectorNumType fabs(const _vectorNumType& x);
 extern _vectorNumType atan2(const _vectorNumType& y, const _vectorNumType& x);

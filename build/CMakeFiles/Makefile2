@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/yuna/cpp_server/build
 all: CMakeFiles/sunnet.dir/all
 all: CMakeFiles/lockstep.dir/all
 all: CMakeFiles/math.dir/all
+all: CMakeFiles/3dmath.dir/all
 all: CMakeFiles/totalMain.dir/all
 .PHONY : all
 
@@ -77,6 +78,7 @@ preinstall:
 clean: CMakeFiles/sunnet.dir/clean
 clean: CMakeFiles/lockstep.dir/clean
 clean: CMakeFiles/math.dir/clean
+clean: CMakeFiles/3dmath.dir/clean
 clean: CMakeFiles/totalMain.dir/clean
 .PHONY : clean
 
@@ -87,7 +89,7 @@ clean: CMakeFiles/totalMain.dir/clean
 CMakeFiles/sunnet.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sunnet.dir/build.make CMakeFiles/sunnet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=12,13,14,15,16,17,18 "Built target sunnet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=25,26,27,28,29,30,31 "Built target sunnet"
 .PHONY : CMakeFiles/sunnet.dir/all
 
 # Build rule for subdir invocation for target.
@@ -113,7 +115,7 @@ CMakeFiles/sunnet.dir/clean:
 CMakeFiles/lockstep.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lockstep.dir/build.make CMakeFiles/lockstep.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lockstep.dir/build.make CMakeFiles/lockstep.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=1,2,3 "Built target lockstep"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=13,14,15 "Built target lockstep"
 .PHONY : CMakeFiles/lockstep.dir/all
 
 # Build rule for subdir invocation for target.
@@ -139,12 +141,12 @@ CMakeFiles/lockstep.dir/clean:
 CMakeFiles/math.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11 "Built target math"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=16,17,18,19,20,21,22,23,24 "Built target math"
 .PHONY : CMakeFiles/math.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/math.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuna/cpp_server/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuna/cpp_server/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/math.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuna/cpp_server/build/CMakeFiles 0
 .PHONY : CMakeFiles/math.dir/rule
@@ -159,18 +161,44 @@ CMakeFiles/math.dir/clean:
 .PHONY : CMakeFiles/math.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/3dmath.dir
+
+# All Build rule for target.
+CMakeFiles/3dmath.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target 3dmath"
+.PHONY : CMakeFiles/3dmath.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/3dmath.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuna/cpp_server/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/3dmath.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuna/cpp_server/build/CMakeFiles 0
+.PHONY : CMakeFiles/3dmath.dir/rule
+
+# Convenience name for target.
+3dmath: CMakeFiles/3dmath.dir/rule
+.PHONY : 3dmath
+
+# clean rule for target.
+CMakeFiles/3dmath.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/clean
+.PHONY : CMakeFiles/3dmath.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/totalMain.dir
 
 # All Build rule for target.
 CMakeFiles/totalMain.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26,27,28,29,30,31,32 "Built target totalMain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuna/cpp_server/build/CMakeFiles --progress-num=32,33,34,35,36,37,38,39,40,41,42,43,44,45,46 "Built target totalMain"
 .PHONY : CMakeFiles/totalMain.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/totalMain.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuna/cpp_server/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuna/cpp_server/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/totalMain.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuna/cpp_server/build/CMakeFiles 0
 .PHONY : CMakeFiles/totalMain.dir/rule

@@ -46,5 +46,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/sunnet.dir/DependInfo.cmake"
   "CMakeFiles/lockstep.dir/DependInfo.cmake"
   "CMakeFiles/math.dir/DependInfo.cmake"
+  "CMakeFiles/3dmath.dir/DependInfo.cmake"
   "CMakeFiles/totalMain.dir/DependInfo.cmake"
   )

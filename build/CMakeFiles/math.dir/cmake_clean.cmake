@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/math.dir/math/src/quaternion.cpp.o.d"
   "CMakeFiles/math.dir/math/src/rotation_matrix.cpp.o"
   "CMakeFiles/math.dir/math/src/rotation_matrix.cpp.o.d"
+  "CMakeFiles/math.dir/math/src/vector3.cpp.o"
+  "CMakeFiles/math.dir/math/src/vector3.cpp.o.d"
   "CMakeFiles/math.dir/math/src/vector_num_type.cpp.o"
   "CMakeFiles/math.dir/math/src/vector_num_type.cpp.o.d"
   "math"

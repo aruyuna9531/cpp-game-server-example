@@ -156,6 +156,19 @@ math/fast:
 .PHONY : math/fast
 
 #=============================================================================
+# Target rules for targets named 3dmath
+
+# Build rule for target.
+3dmath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3dmath
+.PHONY : 3dmath
+
+# fast build rule for target.
+3dmath/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/build
+.PHONY : 3dmath/fast
+
+#=============================================================================
 # Target rules for targets named totalMain
 
 # Build rule for target.
@@ -273,6 +286,7 @@ math/src/euler_angles.o: math/src/euler_angles.cpp.o
 # target to build an object file
 math/src/euler_angles.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/euler_angles.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/euler_angles.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/euler_angles.cpp.o
 .PHONY : math/src/euler_angles.cpp.o
 
@@ -282,6 +296,7 @@ math/src/euler_angles.i: math/src/euler_angles.cpp.i
 # target to preprocess a source file
 math/src/euler_angles.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/euler_angles.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/euler_angles.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/euler_angles.cpp.i
 .PHONY : math/src/euler_angles.cpp.i
 
@@ -291,6 +306,7 @@ math/src/euler_angles.s: math/src/euler_angles.cpp.s
 # target to generate assembly for a file
 math/src/euler_angles.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/euler_angles.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/euler_angles.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/euler_angles.cpp.s
 .PHONY : math/src/euler_angles.cpp.s
 
@@ -300,6 +316,7 @@ math/src/math_util.o: math/src/math_util.cpp.o
 # target to build an object file
 math/src/math_util.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/math_util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/math_util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/math_util.cpp.o
 .PHONY : math/src/math_util.cpp.o
 
@@ -309,6 +326,7 @@ math/src/math_util.i: math/src/math_util.cpp.i
 # target to preprocess a source file
 math/src/math_util.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/math_util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/math_util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/math_util.cpp.i
 .PHONY : math/src/math_util.cpp.i
 
@@ -318,6 +336,7 @@ math/src/math_util.s: math/src/math_util.cpp.s
 # target to generate assembly for a file
 math/src/math_util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/math_util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/math_util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/math_util.cpp.s
 .PHONY : math/src/math_util.cpp.s
 
@@ -327,6 +346,7 @@ math/src/matrix4x3.o: math/src/matrix4x3.cpp.o
 # target to build an object file
 math/src/matrix4x3.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/matrix4x3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/matrix4x3.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/matrix4x3.cpp.o
 .PHONY : math/src/matrix4x3.cpp.o
 
@@ -336,6 +356,7 @@ math/src/matrix4x3.i: math/src/matrix4x3.cpp.i
 # target to preprocess a source file
 math/src/matrix4x3.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/matrix4x3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/matrix4x3.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/matrix4x3.cpp.i
 .PHONY : math/src/matrix4x3.cpp.i
 
@@ -345,6 +366,7 @@ math/src/matrix4x3.s: math/src/matrix4x3.cpp.s
 # target to generate assembly for a file
 math/src/matrix4x3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/matrix4x3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/matrix4x3.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/matrix4x3.cpp.s
 .PHONY : math/src/matrix4x3.cpp.s
 
@@ -354,6 +376,7 @@ math/src/quaternion.o: math/src/quaternion.cpp.o
 # target to build an object file
 math/src/quaternion.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/quaternion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/quaternion.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/quaternion.cpp.o
 .PHONY : math/src/quaternion.cpp.o
 
@@ -363,6 +386,7 @@ math/src/quaternion.i: math/src/quaternion.cpp.i
 # target to preprocess a source file
 math/src/quaternion.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/quaternion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/quaternion.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/quaternion.cpp.i
 .PHONY : math/src/quaternion.cpp.i
 
@@ -372,6 +396,7 @@ math/src/quaternion.s: math/src/quaternion.cpp.s
 # target to generate assembly for a file
 math/src/quaternion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/quaternion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/quaternion.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/quaternion.cpp.s
 .PHONY : math/src/quaternion.cpp.s
 
@@ -381,6 +406,7 @@ math/src/rotation_matrix.o: math/src/rotation_matrix.cpp.o
 # target to build an object file
 math/src/rotation_matrix.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/rotation_matrix.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/rotation_matrix.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/rotation_matrix.cpp.o
 .PHONY : math/src/rotation_matrix.cpp.o
 
@@ -390,6 +416,7 @@ math/src/rotation_matrix.i: math/src/rotation_matrix.cpp.i
 # target to preprocess a source file
 math/src/rotation_matrix.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/rotation_matrix.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/rotation_matrix.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/rotation_matrix.cpp.i
 .PHONY : math/src/rotation_matrix.cpp.i
 
@@ -399,8 +426,39 @@ math/src/rotation_matrix.s: math/src/rotation_matrix.cpp.s
 # target to generate assembly for a file
 math/src/rotation_matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/rotation_matrix.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/rotation_matrix.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/rotation_matrix.cpp.s
 .PHONY : math/src/rotation_matrix.cpp.s
+
+math/src/vector3.o: math/src/vector3.cpp.o
+.PHONY : math/src/vector3.o
+
+# target to build an object file
+math/src/vector3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/vector3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/vector3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/vector3.cpp.o
+.PHONY : math/src/vector3.cpp.o
+
+math/src/vector3.i: math/src/vector3.cpp.i
+.PHONY : math/src/vector3.i
+
+# target to preprocess a source file
+math/src/vector3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/vector3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/vector3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/vector3.cpp.i
+.PHONY : math/src/vector3.cpp.i
+
+math/src/vector3.s: math/src/vector3.cpp.s
+.PHONY : math/src/vector3.s
+
+# target to generate assembly for a file
+math/src/vector3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/vector3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/vector3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/vector3.cpp.s
+.PHONY : math/src/vector3.cpp.s
 
 math/src/vector_num_type.o: math/src/vector_num_type.cpp.o
 .PHONY : math/src/vector_num_type.o
@@ -408,6 +466,7 @@ math/src/vector_num_type.o: math/src/vector_num_type.cpp.o
 # target to build an object file
 math/src/vector_num_type.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/vector_num_type.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/vector_num_type.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/vector_num_type.cpp.o
 .PHONY : math/src/vector_num_type.cpp.o
 
@@ -417,6 +476,7 @@ math/src/vector_num_type.i: math/src/vector_num_type.cpp.i
 # target to preprocess a source file
 math/src/vector_num_type.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/vector_num_type.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/vector_num_type.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/vector_num_type.cpp.i
 .PHONY : math/src/vector_num_type.cpp.i
 
@@ -426,8 +486,105 @@ math/src/vector_num_type.s: math/src/vector_num_type.cpp.s
 # target to generate assembly for a file
 math/src/vector_num_type.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/math/src/vector_num_type.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math/src/vector_num_type.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/totalMain.dir/build.make CMakeFiles/totalMain.dir/math/src/vector_num_type.cpp.s
 .PHONY : math/src/vector_num_type.cpp.s
+
+math_3d/main.o: math_3d/main.cpp.o
+.PHONY : math_3d/main.o
+
+# target to build an object file
+math_3d/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/main.cpp.o
+.PHONY : math_3d/main.cpp.o
+
+math_3d/main.i: math_3d/main.cpp.i
+.PHONY : math_3d/main.i
+
+# target to preprocess a source file
+math_3d/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/main.cpp.i
+.PHONY : math_3d/main.cpp.i
+
+math_3d/main.s: math_3d/main.cpp.s
+.PHONY : math_3d/main.s
+
+# target to generate assembly for a file
+math_3d/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/main.cpp.s
+.PHONY : math_3d/main.cpp.s
+
+math_3d/src/aabb3.o: math_3d/src/aabb3.cpp.o
+.PHONY : math_3d/src/aabb3.o
+
+# target to build an object file
+math_3d/src/aabb3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/src/aabb3.cpp.o
+.PHONY : math_3d/src/aabb3.cpp.o
+
+math_3d/src/aabb3.i: math_3d/src/aabb3.cpp.i
+.PHONY : math_3d/src/aabb3.i
+
+# target to preprocess a source file
+math_3d/src/aabb3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/src/aabb3.cpp.i
+.PHONY : math_3d/src/aabb3.cpp.i
+
+math_3d/src/aabb3.s: math_3d/src/aabb3.cpp.s
+.PHONY : math_3d/src/aabb3.s
+
+# target to generate assembly for a file
+math_3d/src/aabb3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/src/aabb3.cpp.s
+.PHONY : math_3d/src/aabb3.cpp.s
+
+math_3d/src/plane.o: math_3d/src/plane.cpp.o
+.PHONY : math_3d/src/plane.o
+
+# target to build an object file
+math_3d/src/plane.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/src/plane.cpp.o
+.PHONY : math_3d/src/plane.cpp.o
+
+math_3d/src/plane.i: math_3d/src/plane.cpp.i
+.PHONY : math_3d/src/plane.i
+
+# target to preprocess a source file
+math_3d/src/plane.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/src/plane.cpp.i
+.PHONY : math_3d/src/plane.cpp.i
+
+math_3d/src/plane.s: math_3d/src/plane.cpp.s
+.PHONY : math_3d/src/plane.s
+
+# target to generate assembly for a file
+math_3d/src/plane.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/src/plane.cpp.s
+.PHONY : math_3d/src/plane.cpp.s
+
+math_3d/src/triangle.o: math_3d/src/triangle.cpp.o
+.PHONY : math_3d/src/triangle.o
+
+# target to build an object file
+math_3d/src/triangle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/src/triangle.cpp.o
+.PHONY : math_3d/src/triangle.cpp.o
+
+math_3d/src/triangle.i: math_3d/src/triangle.cpp.i
+.PHONY : math_3d/src/triangle.i
+
+# target to preprocess a source file
+math_3d/src/triangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/src/triangle.cpp.i
+.PHONY : math_3d/src/triangle.cpp.i
+
+math_3d/src/triangle.s: math_3d/src/triangle.cpp.s
+.PHONY : math_3d/src/triangle.s
+
+# target to generate assembly for a file
+math_3d/src/triangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dmath.dir/build.make CMakeFiles/3dmath.dir/math_3d/src/triangle.cpp.s
+.PHONY : math_3d/src/triangle.cpp.s
 
 net_base/main.o: net_base/main.cpp.o
 .PHONY : net_base/main.o
@@ -596,6 +753,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... 3dmath"
 	@echo "... lockstep"
 	@echo "... math"
 	@echo "... sunnet"
@@ -627,9 +785,24 @@ help:
 	@echo "... math/src/rotation_matrix.o"
 	@echo "... math/src/rotation_matrix.i"
 	@echo "... math/src/rotation_matrix.s"
+	@echo "... math/src/vector3.o"
+	@echo "... math/src/vector3.i"
+	@echo "... math/src/vector3.s"
 	@echo "... math/src/vector_num_type.o"
 	@echo "... math/src/vector_num_type.i"
 	@echo "... math/src/vector_num_type.s"
+	@echo "... math_3d/main.o"
+	@echo "... math_3d/main.i"
+	@echo "... math_3d/main.s"
+	@echo "... math_3d/src/aabb3.o"
+	@echo "... math_3d/src/aabb3.i"
+	@echo "... math_3d/src/aabb3.s"
+	@echo "... math_3d/src/plane.o"
+	@echo "... math_3d/src/plane.i"
+	@echo "... math_3d/src/plane.s"
+	@echo "... math_3d/src/triangle.o"
+	@echo "... math_3d/src/triangle.i"
+	@echo "... math_3d/src/triangle.s"
 	@echo "... net_base/main.o"
 	@echo "... net_base/main.i"
 	@echo "... net_base/main.s"

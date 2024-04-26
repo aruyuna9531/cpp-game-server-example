@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/totalMain.dir/math/src/quaternion.cpp.o.d"
   "CMakeFiles/totalMain.dir/math/src/rotation_matrix.cpp.o"
   "CMakeFiles/totalMain.dir/math/src/rotation_matrix.cpp.o.d"
+  "CMakeFiles/totalMain.dir/math/src/vector3.cpp.o"
+  "CMakeFiles/totalMain.dir/math/src/vector3.cpp.o.d"
   "CMakeFiles/totalMain.dir/math/src/vector_num_type.cpp.o"
   "CMakeFiles/totalMain.dir/math/src/vector_num_type.cpp.o.d"
   "CMakeFiles/totalMain.dir/net_base/src/conn_writer.cpp.o"

@@ -104,3 +104,15 @@ _vectorNumType operator/(double f, const _vectorNumType& v) {
     assert(v != 0);
     return f / v.value;
 }
+
+_vectorNumType max(const _vectorNumType& a, const _vectorNumType& b) {
+    return a > b ? a : b;
+}
+_vectorNumType min(const _vectorNumType& a, const _vectorNumType& b) {
+    return a < b ? a : b;
+}
+void swap(_vectorNumType& a, _vectorNumType& b) {
+    _vectorNumType tmp = a;
+    a = b;
+    b = tmp;
+}
