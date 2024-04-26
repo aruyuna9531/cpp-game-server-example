@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/lockstep.dir/lockstep/main.cpp.o CMakeFiles/lockstep.dir/lockstep/src/ikcp.c.o -o lockstep 
