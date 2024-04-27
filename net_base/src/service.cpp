@@ -35,7 +35,7 @@ std::shared_ptr<BaseMsg> Service::PopMsg() {
 
 void Service::OnInit() {
     std::cout << "[" << id << "] OnInit" << std::endl;
-    Sunnet::GetInst()->Listen(8002, id);
+    listenfd = Sunnet::GetInst()->Listen(8002, id);
     std::cout << "[" << id << "] listening at port 8002" << std::endl;
 
     std::cout << "[" << id << "] creating lua vm" << std::endl;

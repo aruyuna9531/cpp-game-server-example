@@ -17,6 +17,7 @@ extern "C" {
 class Service {
 public:
     uint32_t id;
+    int listenfd;
     std::shared_ptr<std::string> type;
     bool isExiting = false;
     std::queue<std::shared_ptr<BaseMsg>> msgQueue;

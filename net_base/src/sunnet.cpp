@@ -14,7 +14,14 @@ Sunnet::~Sunnet() {
 
     sleepCount = 0;
     pthread_cond_broadcast(&sleepCond);         // 这里是唤醒所有工作线程让它们退出，否则会卡在wait cv那里
-    close(socketWorker.getEpollFd());
+    for (auto iter = netListeningFds.begin(); iter != netListeningFds.end(); iter++) {
+        bool succ = RemoveConn(*iter);
+        close(*iter);
+        if (succ) {
+            socketWorker.RemoveEvent(*iter);
+        }
+    }
+
     pthread_rwlock_destroy(&servicesLock);
     pthread_spin_destroy(&globalLock);
     pthread_mutex_destroy(&sleepMutex);
@@ -58,7 +65,7 @@ void Sunnet::Wait() {
         worker_threads[i].detach();
     }
     socketThread.detach();
-    
+
     for (int i = 0; i < this->worker_promises.size(); i++) {
         worker_promises[i].wait();
         std::cout << "sunnet: worker " << worker_promises[i].get() << " << finished" << std::endl;
@@ -244,6 +251,7 @@ int Sunnet::Listen(uint32_t port, uint32_t serviceId) {
     }
     AddConn(listenfd, serviceId, Conn::TYPE::LISTEN);   // Listen的线程安全性：AddConn有读写锁
     socketWorker.AddEvent(listenfd);   // Listen的线程安全性：内部epoll_ctl由操作系统保证系统安全性
+    netListeningFds.insert(listenfd);
     return listenfd;
 }
 
@@ -256,5 +264,6 @@ void Sunnet::CloseConn(uint32_t fd) {
     close(fd);
     if (succ) {
         socketWorker.RemoveEvent(fd);
+        netListeningFds.erase(fd);
     }
 }

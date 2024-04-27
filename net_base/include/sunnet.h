@@ -8,6 +8,7 @@
 #include<vector>
 #include<memory>
 #include<unordered_map>
+#include<set>
 #include<string>
 #include<future>
 
@@ -68,6 +69,7 @@ private:
     std::unordered_map<uint32_t, std::shared_ptr<Conn>> conns;
     pthread_rwlock_t connsLock;
 public:
+    std::set<uint32_t> netListeningFds;
     int AddConn(int fd, uint32_t id, Conn::TYPE type);
     std::shared_ptr<Conn> GetConn(int fd);
     bool RemoveConn(int fd);
