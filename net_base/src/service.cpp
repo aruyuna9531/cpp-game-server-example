@@ -3,6 +3,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <cstring>
+#include <signal.h>
 
 Service::Service() {
     pthread_spin_init(&queueLock, PTHREAD_PROCESS_PRIVATE);

@@ -6,43 +6,68 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <signal.h>
+#include <thread>
 Sunnet::Sunnet() {
+}
+Sunnet::~Sunnet() {
+    std::cout << "sunnet destructing" << std::endl;
+    sleepCount = 0;
+    pthread_cond_broadcast(&sleepCond);         // 这里是唤醒所有工作线程让它们退出，否则会卡在wait cv那里
+    close(socketWorker.getEpollFd());
+    pthread_rwlock_destroy(&servicesLock);
+    pthread_spin_destroy(&globalLock);
+    pthread_mutex_destroy(&sleepMutex);
+    pthread_cond_destroy(&sleepCond);
+    pthread_rwlock_destroy(&connsLock);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 
 void Sunnet::Start() {
-    std::cout << "Hello Sunnet" << std::endl;
-    // 屏蔽SIGPIPE信号（对端崩溃己端无法立即反应还会正常发消息，对端收到异常消息会返回RST，对RST套接字write会导致收到来自操作系统的SIGPIPE，会杀掉进程）。有优雅处理方式，但现在先偷个懒
-    signal(SIGPIPE, SIG_IGN);
+    // 处理亿些信号
+    signal(SIGPIPE, SIG_IGN);       // 屏蔽SIGPIPE信号（对端崩溃己端无法立即反应还会正常发消息，对端收到异常消息会返回RST，对RST套接字write会导致收到来自操作系统的SIGPIPE，会杀掉进程）。有优雅处理方式，但现在先偷个懒
 
     pthread_rwlock_init(&servicesLock, NULL);   // 初始化服务锁
     pthread_spin_init(&globalLock, PTHREAD_PROCESS_PRIVATE);    // 全局队列锁
     pthread_mutex_init(&sleepMutex, NULL);
     pthread_cond_init(&sleepCond, NULL);
     pthread_rwlock_init(&connsLock, NULL);
-    // TODO 销毁锁
-    StartWorker();
-    StartSocket();
-}
-void Sunnet::Wait() {
-    for (int i = 0; i < this->worker_threads.size(); i++) {
-        worker_threads[i].join();
-    }
-}
-
-Sunnet* Sunnet::GetInst() {
-    static Sunnet inst;
-    return &inst;
-}
-
-void Sunnet::StartWorker() {
+    
+    // start worker
     for (int i = 0; i < worker_num; i++) {
         std::cout << "start worker thread: " << i << std::endl;
         Worker worker;
         worker.id = i;
         worker.eachNum = (2 << i);
         workers.push_back(worker);
-        worker_threads.push_back(std::thread(worker));
+        std::shared_ptr<std::promise<int>> wp = std::make_shared<std::promise<int>>();
+        worker_promises.push_back(wp->get_future());
+        worker_threads.push_back(std::thread(worker, wp));
     }
+    
+    // start socket
+    socketWorker.Init();
+    std::shared_ptr<std::promise<int>> sp = std::make_shared<std::promise<int>>();
+    socketFuture = sp->get_future();
+    socketThread = std::move(std::thread(socketWorker, std::move(sp)));
+
+
+}
+void Sunnet::Wait() {
+    for (int i = 0; i < this->worker_threads.size(); i++) {
+        worker_threads[i].detach();
+    }
+    socketThread.detach();
+    for (int i = 0; i < this->worker_promises.size(); i++) {
+        worker_promises[i].wait();
+        std::cout << "sunnet: worker " << worker_promises[i].get() << " << finished" << std::endl;
+    }
+    socketFuture.wait();
+    std::cout << "sunnet: socket worker " << socketFuture.get() << " << finished" << std::endl;
+}
+
+Sunnet* Sunnet::GetInst() {
+    static Sunnet inst;
+    return &inst;
 }
 
 // 新建服务
@@ -157,13 +182,6 @@ void Sunnet::CheckAndWakeUp() {
     }
 }
 
-// 开启socket
-void Sunnet::StartSocket() {
-    socketWorker = std::make_shared<SocketWorker>();
-    socketWorker->Init();
-    socketThread = std::make_shared<std::thread>(*socketWorker);
-}
-
 // 添加连接
 int Sunnet::AddConn(int fd, uint32_t id, Conn::TYPE type) {
     std::shared_ptr<Conn> conn = std::make_shared<Conn>();
@@ -223,18 +241,18 @@ int Sunnet::Listen(uint32_t port, uint32_t serviceId) {
         return -1;
     }
     AddConn(listenfd, serviceId, Conn::TYPE::LISTEN);   // Listen的线程安全性：AddConn有读写锁
-    socketWorker->AddEvent(listenfd);   // Listen的线程安全性：内部epoll_ctl由操作系统保证系统安全性
+    socketWorker.AddEvent(listenfd);   // Listen的线程安全性：内部epoll_ctl由操作系统保证系统安全性
     return listenfd;
 }
 
 void Sunnet::ModifyEvent(int fd, bool epollOut) {
-    socketWorker->ModifyEvent(fd, epollOut);
+    socketWorker.ModifyEvent(fd, epollOut);
 }
 
 void Sunnet::CloseConn(uint32_t fd) {
     bool succ = RemoveConn(fd);
     close(fd);
     if (succ) {
-        socketWorker->RemoveEvent(fd);
+        socketWorker.RemoveEvent(fd);
     }
 }

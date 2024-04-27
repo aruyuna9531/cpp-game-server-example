@@ -3,15 +3,17 @@
 
 #include <sys/epoll.h>
 #include <memory>
+#include <future>
 #include "conn.h"
 
 class SocketWorker {
 private:
     int epollfd;        // epoll描述符
-
 public:
+    ~SocketWorker();
     void Init();
-    void operator()();
+    void operator()(std::shared_ptr<std::promise<int>>&& exitP);
+    int getEpollFd();
 
     void AddEvent(int fd);
     void RemoveEvent(int fd);

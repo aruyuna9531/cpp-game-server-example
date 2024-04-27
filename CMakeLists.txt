@@ -1,9 +1,11 @@
 project (sunnet)
 cmake_minimum_required(VERSION 3.22)
-include_directories(net_base/include lockstep/include math/include math_3d/include)
+set(CMAKE_CXX_FLAGS "-g")
+include_directories(net_base/include lockstep/include math/include math_3d/include framebase)
 aux_source_directory(./net_base/src DIR_NET)
 aux_source_directory(./lockstep/src DIR_LS)
 aux_source_directory(./math/src DIR_MATH)
+aux_source_directory(./framebase DIR_FRAME)
 
 # 格式： 可执行文件名字 main文件位置 其他源码（cpp）位置
 add_executable(sunnet ./net_base/main.cpp ${DIR_NET})

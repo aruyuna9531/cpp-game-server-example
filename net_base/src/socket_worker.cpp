@@ -8,22 +8,37 @@
 #include <sys/socket.h>
 #include <signal.h>
 
+SocketWorker::~SocketWorker() {
+    std::cout << "socket worker " << epollfd << " closed" << std::endl;
+}
+
 void SocketWorker::Init() {
     std::cout << "socket worker init" << std::endl;
     epollfd = epoll_create(1024);
     assert(epollfd > 0);
 }
 
-void SocketWorker::operator()() {
-    while(true) {
+int SocketWorker::getEpollFd() {
+    return epollfd;
+}
+
+void SocketWorker::operator()(std::shared_ptr<std::promise<int>>&& exitP) {
+    while(Sunnet::GetInst()->running) {
         const int event_size = 64;
         epoll_event events[event_size];
+        std::cout << "socket worker waiting..." << std::endl;
         int eventCount = epoll_wait(epollfd, events, event_size, -1);
+        if (eventCount == -1 && errno == EINTR) {
+            std::cout << "socket worker errno = EINTR" << std::endl;
+            break;
+        }
         for (int i = 0; i < eventCount; i++) {
             epoll_event e = events[i];
             OnEvent(e);
         }
     }
+    std::cout << "socket worker running = false, finish" << std::endl;
+    exitP->set_value_at_thread_exit(epollfd);
 }
 
 // 添加事件

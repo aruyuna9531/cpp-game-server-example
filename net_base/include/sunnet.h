@@ -9,6 +9,7 @@
 #include<memory>
 #include<unordered_map>
 #include<string>
+#include<future>
 
 class Worker;
 
@@ -16,6 +17,7 @@ class Sunnet {
 private:
     Sunnet();
     Sunnet(const Sunnet &single) = delete;
+    ~Sunnet();
     const Sunnet &operator=(const Sunnet &single) = delete;
 public:
     static Sunnet* GetInst();
@@ -25,9 +27,8 @@ public:
 private:
     int worker_num = 3;
     std::vector<Worker> workers;
+    std::vector<std::future<int>> worker_promises;
     std::vector<std::thread> worker_threads;
-
-    void StartWorker();
 
 private:
     std::unordered_map<uint32_t, std::shared_ptr<Service>> services;    // 存放系统中的所有服务
@@ -58,10 +59,9 @@ public:
 
 // socket worker
 private:
-    std::shared_ptr<SocketWorker> socketWorker;
-    std::shared_ptr<std::thread> socketThread;
-private:
-    void StartSocket();
+    SocketWorker socketWorker;
+    std::future<int> socketFuture;
+    std::thread socketThread;
 
 // connections
 private:
@@ -80,6 +80,7 @@ public:
 // test
 public:
     std::shared_ptr<BaseMsg> MakeMsg(uint32_t source, char* buff/*这个变量使用new*/, int len);
+    bool running = true;
 };
 
 #endif // SUNNET_H_

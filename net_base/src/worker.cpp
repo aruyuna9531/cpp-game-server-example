@@ -3,9 +3,13 @@
 #include "sunnet.h"
 #include<iostream>
 #include<unistd.h>
+#include<signal.h>
 
-void Worker::operator()() {
-    while(true) {
+Worker::~Worker() {
+    std::cout << "worker " << id << " closed" << std::endl;
+}
+void Worker::operator()(std::shared_ptr<std::promise<int>>&& exitP) {
+    while(Sunnet::GetInst()->running) {
         std::shared_ptr<Service> srv = Sunnet::GetInst()->PopGlobalQueue();
         if (!srv) {
             // 线程休眠，等待唤醒
@@ -17,6 +21,8 @@ void Worker::operator()() {
             CheckAndPutGlobal(srv); // 判断服务是否还有未处理消息，有的话保持service在全局队列
         }
     }
+    std::cout << "worker " << id << " finish" << std::endl;
+    exitP->set_value_at_thread_exit(id); // 在正常退出时分发这个值
 }
 
 void Worker::CheckAndPutGlobal(std::shared_ptr<Service> srv) {

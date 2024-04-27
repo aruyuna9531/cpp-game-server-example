@@ -2,6 +2,7 @@
 #define SVR_WORKER_H_
 #include<thread>
 #include<memory>
+#include<future>
 class Sunnet;
 class Service;
 
@@ -10,7 +11,8 @@ class Worker {
 public:
     int id;
     int eachNum;        // 每次处理消息数
-    void operator()();  // 线程函数
+    ~Worker();
+    void operator()(std::shared_ptr<std::promise<int>>&& exitP);  // 线程函数
     void CheckAndPutGlobal(std::shared_ptr<Service> srv);
 };
 #endif
