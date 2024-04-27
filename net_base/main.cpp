@@ -31,8 +31,8 @@ int main() {
     // Sunnet::GetInst()->CloseConn(fd);
 
 
-    // auto t = std::make_shared<std::string>("main");
-    // uint32_t m = Sunnet::GetInst()->NewService(t);
+    auto t = std::make_shared<std::string>("main");
+    uint32_t m = Sunnet::GetInst()->NewService(t);
 
     Sunnet::GetInst()->Wait();
     return 0;

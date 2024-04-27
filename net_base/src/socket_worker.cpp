@@ -27,7 +27,7 @@ void SocketWorker::operator()(std::shared_ptr<std::promise<int>>&& exitP) {
         const int event_size = 64;
         epoll_event events[event_size];
         std::cout << "socket worker waiting..." << std::endl;
-        int eventCount = epoll_wait(epollfd, events, event_size, -1);
+        int eventCount = epoll_wait(epollfd, events, event_size, -1);   // TODO 退出进程时怎么唤醒这里阻塞的epoll_wait？
         if (eventCount == -1 && errno == EINTR) {
             std::cout << "socket worker errno = EINTR" << std::endl;
             break;

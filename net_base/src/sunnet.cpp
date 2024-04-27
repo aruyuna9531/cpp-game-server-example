@@ -11,6 +11,7 @@ Sunnet::Sunnet() {
 }
 Sunnet::~Sunnet() {
     std::cout << "sunnet destructing" << std::endl;
+
     sleepCount = 0;
     pthread_cond_broadcast(&sleepCond);         // 这里是唤醒所有工作线程让它们退出，否则会卡在wait cv那里
     close(socketWorker.getEpollFd());
@@ -57,6 +58,7 @@ void Sunnet::Wait() {
         worker_threads[i].detach();
     }
     socketThread.detach();
+    
     for (int i = 0; i < this->worker_promises.size(); i++) {
         worker_promises[i].wait();
         std::cout << "sunnet: worker " << worker_promises[i].get() << " << finished" << std::endl;
