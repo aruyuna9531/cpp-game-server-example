@@ -87,7 +87,7 @@ void CreateWorldComponent::HandleNetworkDisconnect(Packet* pPacket)
 
     auto appId = GetIdFromAppKey(pTagApp->KeyInt64);
 
-    // ¶ÏÏßµÄSpaceÉÏÊÇ·ñÓĞÕıÔÚ´´½¨µÄµØÍ¼
+    // æ–­çº¿çš„Spaceä¸Šæ˜¯å¦æœ‰æ­£åœ¨åˆ›å»ºçš„åœ°å›¾
     do
     {
         auto iterCreating = std::find_if(_creating.begin(), _creating.end(), [&appId](auto pair)
@@ -98,7 +98,7 @@ void CreateWorldComponent::HandleNetworkDisconnect(Packet* pPacket)
         if (iterCreating == _creating.end())
             break;
 
-        // ÕıÔÚ´´½¨µÄÊ±ºò£¬space½ø³Ì¶Ï¿ªÁË£¬ÁíÕÒ½ø³Ì´´½¨
+        // æ­£åœ¨åˆ›å»ºçš„æ—¶å€™ï¼Œspaceè¿›ç¨‹æ–­å¼€äº†ï¼Œå¦æ‰¾è¿›ç¨‹åˆ›å»º
         auto worldId = iterCreating->first;
         _creating.erase(iterCreating);
 
@@ -106,7 +106,7 @@ void CreateWorldComponent::HandleNetworkDisconnect(Packet* pPacket)
 
     } while (true);
 
-    // ¶ÏÏßµÄSpaceÉÏÓĞÒÑ´´½¨µÄ¹«¹²µØÍ¼£¬È«²¿É¾³ı
+    // æ–­çº¿çš„Spaceä¸Šæœ‰å·²åˆ›å»ºçš„å…¬å…±åœ°å›¾ï¼Œå…¨éƒ¨åˆ é™¤
     do
     {
         auto iterCreated = std::find_if(_created.begin(), _created.end(), [&appId](auto pair)
@@ -122,7 +122,7 @@ void CreateWorldComponent::HandleNetworkDisconnect(Packet* pPacket)
     } while (true);
 
 
-    // ¶ÏÏßµÄSpaceÉÏ´´½¨µÄ¸±±¾µØÍ¼
+    // æ–­çº¿çš„Spaceä¸Šåˆ›å»ºçš„å‰¯æœ¬åœ°å›¾
     do
     {
         const auto iter = std::find_if(_dungeons.begin(), _dungeons.end(), [&appId](auto pair)
@@ -156,12 +156,12 @@ void CreateWorldComponent::HandleRequestWorld(Packet* pPacket)
         return;
     }
 
-    // ÕıÔÚ´´½¨ÖĞ£¬µÈ´ı
+    // æ­£åœ¨åˆ›å»ºä¸­ï¼Œç­‰å¾…
     const auto iter = _creating.find(worldId);
     if (iter != _creating.end())
         return;
 
-    // ÒÑ¾­±»´´½¨ÁË
+    // å·²ç»è¢«åˆ›å»ºäº†
     const auto iter2 = _created.find(worldId);
     if (iter2 != _created.end()) 
     {

@@ -37,8 +37,8 @@ void WorldOperatorComponent::HandleCreateWorld(Packet* pPacket)
         LOG_ERROR("create world error. dungeon is created. but requestWorldSn == 0");
     }
 
-    // Èç¹û requestWorldSn == 0£¬¹ã²¥¸øËùÓĞgame, appmgr
-    // Èç¹û requestWorldSn != 0£¬Ôò¹ã²¥¸øÖ¸¶¨µÄ worldproxy ºÍ appmgr
+    // å¦‚æœ requestWorldSn == 0ï¼Œå¹¿æ’­ç»™æ‰€æœ‰game, appmgr
+    // å¦‚æœ requestWorldSn != 0ï¼Œåˆ™å¹¿æ’­ç»™æŒ‡å®šçš„ worldproxy å’Œ appmgr
     Proto::BroadcastCreateWorld protoRs;
     protoRs.set_world_id(worldId);
     protoRs.set_world_sn(worldSn);
@@ -46,28 +46,28 @@ void WorldOperatorComponent::HandleCreateWorld(Packet* pPacket)
 
     if ((Global::GetInstance()->GetCurAppType() & APP_APPMGR) == 0)
     {
-        // ±¾½ø³ÌÖĞ²»°üÀ¨ AppMgr, ÏòAppMgr·¢ËÍÏûÏ¢
+        // æœ¬è¿›ç¨‹ä¸­ä¸åŒ…æ‹¬ AppMgr, å‘AppMgrå‘é€æ¶ˆæ¯
         MessageSystemHelp::SendPacket(Proto::MsgId::MI_BroadcastCreateWorld, protoRs, APP_APPMGR);
     }
 
-    // ±¾½ø³ÌÖĞ²»°üÀ¨ AppGame
+    // æœ¬è¿›ç¨‹ä¸­ä¸åŒ…æ‹¬ AppGame
     if ((Global::GetInstance()->GetCurAppType() & APP_GAME) == 0)
     {
         if (gameAppId != 0)
         {
-            // ÏòÖ¸¶¨Game·¢ËÍÊı¾İ
+            // å‘æŒ‡å®šGameå‘é€æ•°æ®
             MessageSystemHelp::SendPacket(Proto::MsgId::MI_BroadcastCreateWorld, protoRs, APP_GAME, gameAppId);
         }
         else
         {
-            // ÏòËùÓĞGame½ø³Ì·¢ËÍÊı¾İ
+            // å‘æ‰€æœ‰Gameè¿›ç¨‹å‘é€æ•°æ®
             MessageSystemHelp::SendPacketToAllApp(Proto::MsgId::MI_BroadcastCreateWorld, protoRs, APP_GAME);
         }
     }
 
     if ((Global::GetInstance()->GetCurAppType() & APP_GAME) != 0 || (Global::GetInstance()->GetCurAppType() & APP_APPMGR) != 0)
     {
-        // ±¾½ø³ÌÖĞ°üÀ¨ÁËAppGame AppMgrÆäÖĞÒ»¸ö£¬ĞèÒªÖĞ×ªÏûÏ¢
+        // æœ¬è¿›ç¨‹ä¸­åŒ…æ‹¬äº†AppGame AppMgrå…¶ä¸­ä¸€ä¸ªï¼Œéœ€è¦ä¸­è½¬æ¶ˆæ¯
         MessageSystemHelp::DispatchPacket(Proto::MsgId::MI_BroadcastCreateWorld, protoRs, nullptr);
     }
 }

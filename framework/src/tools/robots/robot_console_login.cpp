@@ -28,7 +28,7 @@ void RobotConsoleLogin::HandleLogin(std::vector<std::string>& params)
     if (!CheckParamCnt(params, 1))
         return;
 
-    // 单独登录时，登录到主线程，方便输入cmd
+    // 鍗曠嫭鐧诲綍鏃讹紝鐧诲綍鍒颁富绾跨▼锛屾柟渚胯緭鍏md
     Proto::RobotCreate proto;
     const auto pThreadMgr = ThreadMgr::GetInstance();
     pThreadMgr->CreateComponent<RobotCollection>(params[0], 0, 0);
@@ -54,11 +54,11 @@ void RobotConsoleLogin::HandleLoginEx(std::vector<std::string>& params) const
     const auto pConfig = pYaml->GetConfig(pGlobal->GetCurAppType());
     const auto pAppConfig = dynamic_cast<AppConfig*>(pConfig);
 
-    // 线程数量
+    // 绾跨▼鏁伴噺
     auto threadCnt = pAppConfig->LogicThreadNum;
     threadCnt = threadCnt <= 0 ? 1 : threadCnt;
 
-    // 每个线程中robot数量
+    // 姣忎釜绾跨▼涓璻obot鏁伴噺
     int perThreadRobotCnt = static_cast<int>(std::ceil(count / threadCnt));
     perThreadRobotCnt = perThreadRobotCnt < 1 ? 1 : perThreadRobotCnt;
 

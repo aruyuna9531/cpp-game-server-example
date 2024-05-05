@@ -23,7 +23,7 @@ void RobotConsoleWorld::HandleEnter(std::vector<std::string>& params) const
     auto pGlobalEntitySystem = ComponentHelp::GetGlobalEntitySystem();
 	const auto worldId = std::stoi(params[0]);
 
-	// ¼ì²éÒ»ÏÂºÏ·¨ÐÔ
+	// æ£€æŸ¥ä¸€ä¸‹åˆæ³•æ€§
 	auto pResMgr = pGlobalEntitySystem->GetComponent<ResourceManager>();
 	const auto pWorldRes = pResMgr->Worlds->GetResource(worldId);
 	if (pWorldRes == nullptr)

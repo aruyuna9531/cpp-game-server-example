@@ -78,7 +78,7 @@ bool SyncComponent::GetOneApp(APP_TYPE appType, AppInfo* pInfo)
         return false;
     }
 
-    // ÕÒµ½µÚÒ»¸öÍ¬ÀàĞÍÊı¾İ
+    // æ‰¾åˆ°ç¬¬ä¸€ä¸ªåŒç±»å‹æ•°æ®
     auto iter = std::find_if(_apps.begin(), _apps.end(), [&appType](auto pair)
         {
             return (pair.second.AppType & appType) != 0;
@@ -90,7 +90,7 @@ bool SyncComponent::GetOneApp(APP_TYPE appType, AppInfo* pInfo)
         return false;
     }
 
-    // ±éÀúºóÃæµÄÊı¾İ£¬ÕÒµ½×îĞ¡Öµ
+    // éå†åé¢çš„æ•°æ®ï¼Œæ‰¾åˆ°æœ€å°å€¼
     auto min = iter->second.Online;
     int appId = iter->first;
     for (; iter != _apps.end(); ++iter)
@@ -108,7 +108,7 @@ bool SyncComponent::GetOneApp(APP_TYPE appType, AppInfo* pInfo)
         }
     }
 
-    // Êı¾İ¼Ó1,ÒÔ±ÜÃâË²¼äÂäÔÚÍ¬Ò»¸öAppÉÏ£¬ÏÂ´ÎÍ¬²½Êı¾İ»á½«Æä¸²¸ÇÎªÕæÊµÖµ
+    // æ•°æ®åŠ 1,ä»¥é¿å…ç¬é—´è½åœ¨åŒä¸€ä¸ªAppä¸Šï¼Œä¸‹æ¬¡åŒæ­¥æ•°æ®ä¼šå°†å…¶è¦†ç›–ä¸ºçœŸå®å€¼
     _apps[appId].Online += 1;
     *pInfo = _apps[appId];
     return true;

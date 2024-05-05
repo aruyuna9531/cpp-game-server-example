@@ -55,7 +55,7 @@ bool ResourceBase::LoadProperty(const std::string line)
 {
     std::vector<std::string> propertyList = ParserLine(line);
 
-    // csv ĞĞ×îºó¿ÉÄÜÒ»¸ö¿´²»¼ûµÄ×Ö·û£¬ËùÒÔpropertyListÒ»¶¨ÊÇ´óÓÚ_headµÄ
+    // csv è¡Œæœ€åå¯èƒ½ä¸€ä¸ªçœ‹ä¸è§çš„å­—ç¬¦ï¼Œæ‰€ä»¥propertyListä¸€å®šæ˜¯å¤§äº_headçš„
     if (propertyList.size() < _head.size())
     {
         LOG_ERROR("LoadProperty failed. " << "line size:" << propertyList.size() << " head size:" << _head.size() << " \t" << line.c_str());

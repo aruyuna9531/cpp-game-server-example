@@ -112,7 +112,7 @@ bool NetworkConnector::Connect(ConnectDetail* pDetail)
         const auto socketError = _sock_err();
         if (!NetworkHelp::IsError(socketError))
         {
-            // Î´Á¬½ÓÉÏ£¬µÈ´ý
+            // æœªè¿žæŽ¥ä¸Šï¼Œç­‰å¾…
 #ifdef LOG_TRACE_COMPONENT_OPEN
             std::stringstream traceMsg;
             traceMsg << "create connect != 0 waiting, err=" << socketError;
@@ -124,7 +124,7 @@ bool NetworkConnector::Connect(ConnectDetail* pDetail)
         }
         else
         {
-            // Î´Á¬½ÓÉÏ£¬³ö´í£¬ÖØÀ´
+            // æœªè¿žæŽ¥ä¸Šï¼Œå‡ºé”™ï¼Œé‡æ¥
             LOG_WARN("failed to connect 2. ip:" << pDetail->Ip.c_str() << " port:" << pDetail->Port << " network sn:" << _sn << " socket:" << socket << " err:" << socketError);
             _sock_close(socket);
             return false;
@@ -149,7 +149,7 @@ void NetworkConnector::HandleNetworkConnect(Packet* pPacket)
 
 void NetworkConnector::Update()
 {
-    // ÓÐÐÂµÄÁ¬½ÓÇëÇó
+    // æœ‰æ–°çš„è¿žæŽ¥è¯·æ±‚
     if (_connecting.CanSwap())
         _connecting.Swap(nullptr);
 
@@ -177,7 +177,7 @@ void NetworkConnector::Update()
     CheckBegin();
 #endif
 
-    // ÓÐÐÂµÄÁ¬½ÓÇëÇó
+    // æœ‰æ–°çš„è¿žæŽ¥è¯·æ±‚
     if (_connecting.CanSwap())
         _connecting.Swap(nullptr);
 

@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 
     const auto pThreadMgr = ThreadMgr::GetInstance();
 
-    // È«¾Ö
+    // å…¨å±€
     pThreadMgr->GetEntitySystem()->AddComponent<ResourceManager>();
 
     auto pConsole = pThreadMgr->GetEntitySystem()->GetComponent<Console>();
@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
     pConsole->Register<RobotConsoleHttp>("http");
     pConsole->Register<RobotConsoleWorld>("world");
 
-    // RobotMgrÔö¼Óµ½Ö÷Ïß³ÌÖÐ
+    // RobotMgrå¢žåŠ åˆ°ä¸»çº¿ç¨‹ä¸­
     pThreadMgr->GetEntitySystem()->AddComponent<RobotMgr>();
 
     // connector

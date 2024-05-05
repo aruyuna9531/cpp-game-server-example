@@ -45,7 +45,7 @@ void DynamicPacketPool::Update()
 
     DynamicObjectPool<Packet>::Update();
 
-    // ÊÇ·ñĞèÒªÊÍ·Å
+    // æ˜¯å¦éœ€è¦é‡Šæ”¾
     auto lists = _objInUse.GetReaderCache();
     for (auto iter = lists->begin(); iter != lists->end(); ++iter)
     {
@@ -98,6 +98,6 @@ void DynamicPacketPool::Show()
         LOG_WARN(" msgId:" << name.c_str() << " " << iter->second);
     }
 
-    // ·ÖÎöÒ»ÏÂÕıÔÚÊ¹ÓÃµÄPacketµÄĞ­ÒéºÅ
+    // åˆ†æä¸€ä¸‹æ­£åœ¨ä½¿ç”¨çš„Packetçš„åè®®å·
     DynamicObjectPool<Packet>::Show();
 }

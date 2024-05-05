@@ -23,7 +23,7 @@ SystemManager::SystemManager()
     //_systems.emplace_back(new DependenceSystem());
     //_systems.emplace_back(new StartSystem());
 
-    // gen random seed ¸ù¾İÏß³ÌIDÉú³ÉËæ»úÖÖ×Ó
+    // gen random seed æ ¹æ®çº¿ç¨‹IDç”Ÿæˆéšæœºç§å­
     std::stringstream strStream;
     strStream << std::this_thread::get_id();
     std::string idstr = strStream.str();
@@ -92,7 +92,7 @@ void SystemManager::Dispose()
     delete _pEntitySystem;
     _pEntitySystem = nullptr;
 
-    // ÔÙÏú»ÙÖ®Ç°£¬ÔÙ×öÒ»´ÎUpdate£¬ÈÃuseÖĞµÄ¶ÔÏó»Øµ½FreeÖĞ
+    // å†é”€æ¯ä¹‹å‰ï¼Œå†åšä¸€æ¬¡Updateï¼Œè®©useä¸­çš„å¯¹è±¡å›åˆ°Freeä¸­
     _pPoolCollector->Update();
     _pPoolCollector->Dispose();
     delete _pPoolCollector;

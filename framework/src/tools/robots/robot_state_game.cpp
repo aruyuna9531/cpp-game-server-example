@@ -7,7 +7,7 @@ void RobotStateGameConnecting::OnEnterState()
 {
     _pParentObj->NetworkDisconnect();
 
-    // 请求一个新的Tcp连接
+    // 璇锋眰涓�涓柊鐨凾cp杩炴帴
     auto tokenObj = _pParentObj->GetComponent<RobotComponentGameToken>();
     TagValue tagValue{ _pParentObj->GetAccount(), 0 };
     MessageSystemHelp::CreateConnect(NetworkType::TcpConnector, TagType::Account, tagValue, tokenObj->GetGameIp(), tokenObj->GetGamePort());

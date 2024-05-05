@@ -13,13 +13,13 @@ void TestHttpLogin::Awake(std::string account, std::string password)
     // message
     auto pMsgSystem = GetSystemManager()->GetMessageSystem();
 
-    // ´¦Àí¶ÏÏß
+    // å¤„ç†æ–­çº¿
     pMsgSystem->RegisterFunctionFilter<TestHttpLogin>(this, Proto::MsgId::MI_NetworkDisconnect, BindFunP1(this, &TestHttpLogin::GetTestHttpLogin), BindFunP2(this, &TestHttpLogin::HandleNetworkDisconnect));
     pMsgSystem->RegisterFunctionFilter<TestHttpLogin>(this, Proto::MsgId::MI_NetworkConnected, BindFunP1(this, &TestHttpLogin::GetTestHttpLogin), BindFunP2(this, &TestHttpLogin::HandleNetworkConnected));
 
     pMsgSystem->RegisterFunctionFilter<TestHttpLogin>(this, Proto::MsgId::MI_HttpOuterResponse, BindFunP1(this, &TestHttpLogin::GetTestHttpLogin), BindFunP2(this, &TestHttpLogin::HandleHttpOuterResponse));
 
-    // ·¢ÆğÁ¬½Ó
+    // å‘èµ·è¿æ¥
     auto pYaml = ComponentHelp::GetYaml();
     const auto pLoginConfig = dynamic_cast<LoginConfig*>(pYaml->GetConfig(APP_LOGIN));
     ParseUrlInfo info;
@@ -61,7 +61,7 @@ void TestHttpLogin::HandleNetworkDisconnect(TestHttpLogin* pObj, Packet* pPacket
 
 void TestHttpLogin::HandleNetworkConnected(TestHttpLogin* pObj, Packet* pPacket)
 {
-    // Á¬½Ó³É¹¦£¬·¢ËÍÊı¾İ
+    // è¿æ¥æˆåŠŸï¼Œå‘é€æ•°æ®
     _socketKey.CopyFrom(pPacket->GetSocketKey());
     LOG_DEBUG("connected." << pPacket);
 

@@ -34,7 +34,7 @@ void NetworkListen::Awake(std::string ip, int port, NetworkType iType)
     if (_masterSocket == INVALID_SOCKET)
         return;
 
-    // 快速重启地址
+    // 蹇�熼噸鍚湴鍧�
     int isOn = 1;
     setsockopt(_masterSocket, SOL_SOCKET, SO_REUSEADDR, (SetsockOptType)&isOn, sizeof(isOn));
 

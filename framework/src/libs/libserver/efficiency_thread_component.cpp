@@ -28,7 +28,7 @@ void EfficiencyThreadComponent::UpdateTime(const uint64 disTime)
 
 void EfficiencyThreadComponent::Sync() const
 {
-	// ??
+	// æ•ˆç‡æµ‹è¯•
 	Proto::Efficiency protoTest;
     protoTest.set_time(_efficiencyUpdateTime);
     protoTest.set_thread_type((int)_threadType);

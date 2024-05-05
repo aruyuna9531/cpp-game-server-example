@@ -42,8 +42,8 @@ void EntitySystem::Update()
 
 void EntitySystem::Dispose()
 {
-    // ²ğ³ÉÁ½´ÎÏú»Ù
-    // 1. Dispose ÊÍ·ÅÈ«²¿×é¼şÊ±,ComponentCollectionsÓĞ½»²æÒıÓÃ
+    // æ‹†æˆä¸¤æ¬¡é”€æ¯
+    // 1. Dispose é‡Šæ”¾å…¨éƒ¨ç»„ä»¶æ—¶,ComponentCollectionsæœ‰äº¤å‰å¼•ç”¨
     // 2. delete 
     for (const auto one : _objSystems)
     {

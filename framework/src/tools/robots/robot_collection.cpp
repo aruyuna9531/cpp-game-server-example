@@ -12,7 +12,7 @@
 
 void RobotCollection::Awake(std::string account, int min, int max)
 {
-    // ´´½¨µÄRobot²»°üÀ¨MaxÖµ [min, max)
+    // åˆ›å»ºçš„Robotä¸åŒ…æ‹¬Maxå€¼ [min, max)
     //LOG_DEBUG("create robot. account:" << account.c_str() << " min:" << min << " max:" << max << " thread id:" << std::this_thread::get_id());
     if (min == 0 && max == 0)
     {
@@ -83,7 +83,7 @@ void RobotCollection::HandleNetworkConnected(Robot* pRobot, Packet* pPacket)
 
 void RobotCollection::HandleNetworkDisconnect(Robot* pRobot, Packet* pPacket)
 {
-    // ÓĞ¿ÉÄÜÒÑ¾­ÔÚtcp connector Ö®ºó£¬ http µÄ¶Ï¿ª²ÅÀ´
+    // æœ‰å¯èƒ½å·²ç»åœ¨tcp connector ä¹‹åï¼Œ http çš„æ–­å¼€æ‰æ¥
     if (pRobot->GetSocketKey()->NetType != pPacket->GetSocketKey()->NetType)
         return;
 
@@ -155,10 +155,10 @@ void RobotCollection::HandlePlayerList(Robot* pRobot, Packet* pPacket)
         // create
         Proto::CreatePlayer protoCreate;
 
-        // ÕËºÅÃûÎª½ÇÉ«Ãû
+        // è´¦å·åä¸ºè§’è‰²å
         protoCreate.set_name(pRobot->GetAccount().c_str());
 
-        // Ëæ»úĞÔ±ğ
+        // éšæœºæ€§åˆ«
         std::uniform_int_distribution<int> disGender(0, 1);
         const int nGender = disGender(*pRandomEngine);
         if (nGender == 1)
@@ -174,7 +174,7 @@ void RobotCollection::HandlePlayerList(Robot* pRobot, Packet* pPacket)
         //std::uniform_int_distribution<int> disIndex(0, protoList.player_size() - 1);
         //const int index = disIndex(*pRandomEngine);
 
-        // È¡µÚÒ»¸ö
+        // å–ç¬¬ä¸€ä¸ª
         const int index = 0;
         auto protoPlayer = protoList.player(index);
 

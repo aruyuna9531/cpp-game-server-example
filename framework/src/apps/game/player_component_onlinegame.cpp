@@ -36,7 +36,7 @@ void PlayerComponentOnlineInGame::BackToPool()
 
 void PlayerComponentOnlineInGame::SetOnlineFlag() const
 {
-	// 设置在线标志
+	// 璁剧疆鍦ㄧ嚎鏍囧織
 	Proto::PlayerSyncOnlineToRedis protoSync;
 	protoSync.set_account(_account.c_str());
 	protoSync.set_version(_onlineVersion);
