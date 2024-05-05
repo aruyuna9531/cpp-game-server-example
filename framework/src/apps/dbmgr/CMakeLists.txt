@@ -15,7 +15,7 @@ project(${MyProjectName})
 
 aux_source_directory(. SRCS)
 aux_source_directory(../../libs/libserver SRCS)
-aux_source_directory(../../libs/libserver/protobuf SRCS)
+aux_source_directory(../../protobuf SRCS)
 aux_source_directory(../../libs/libserver/mongoose SRCS)
 
 include_directories(../../libs)
@@ -32,6 +32,7 @@ link_directories(${CMAKE_BINARY_DIR}/../../../libs)
 link_directories(${CMAKE_BINARY_DIR}/../../../../libs/linux)
 
 add_executable(${MyProjectName} ${SRCS})
+target_link_libraries(${MyProjectName} liblua.a)
 target_link_libraries(${MyProjectName} protobuf)
 target_link_libraries(${MyProjectName} jsoncpp)
 target_link_libraries(${MyProjectName} hiredis)

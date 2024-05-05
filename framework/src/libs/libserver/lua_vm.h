@@ -13,4 +13,4 @@ private:
 public:
     LuaVm();
     ~LuaVm();
-}
+};

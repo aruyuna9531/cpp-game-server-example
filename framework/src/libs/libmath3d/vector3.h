@@ -4,7 +4,7 @@
 #include<assert.h>
 #include<string>
 #include "vector_num_type.h"
-#include "protobuf/db.pb.h"
+#include "../../protobuf/db.pb.h"
 #include <log4cplus/streams.h>
 #include <ostream>
 

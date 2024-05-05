@@ -14,7 +14,7 @@ void Player::Awake(NetIdentify* pIdentify, std::string account)
     _tagKey.Clear();
     _tagKey.AddTag(TagType::Account, _account);
 
-    // µÇÂ¼³É¹¦£¬ĞŞ¸ÄÍøÂçµ×²ãµÄ±êÊ¶
+    // ç™»å½•æˆåŠŸï¼Œä¿®æ”¹ç½‘ç»œåº•å±‚çš„æ ‡è¯†
     MessageSystemHelp::DispatchPacket(Proto::MsgId::MI_NetworkListenKey, this);
 }
 
@@ -31,8 +31,7 @@ void Player::Awake(NetIdentify* pIdentify, uint64 playerSn, uint64 worldSn)
     _tagKey.AddTag(TagType::Player, playerSn);
     _tagKey.AddTag(TagType::Entity, worldSn);
 
-    // space½ø³Ìµ÷ÓÃ£¬µ«Space²»ĞèÒªĞŞ¸ÄÍøÂç±êÊ¶
-    // µÇÂ¼³É¹¦£¬ĞŞ¸ÄÍøÂçµ×²ãµÄ±êÊ¶
+    // spaceè¿›ç¨‹è°ƒç”¨ï¼Œä½†Spaceä¸éœ€è¦ä¿®æ”¹ç½‘ç»œæ ‡è¯†
     //MessageSystemHelp::DispatchPacket(Proto::MsgId::MI_NetworkListenKey, this);
 }
 
@@ -79,7 +78,7 @@ void Player::ParserFromProto(const uint64 playerSn, const Proto::Player& proto)
     _player.CopyFrom(proto);
     _name = _player.name();
 
-    // ÄÚ´æÖĞĞŞ¸ÄÊı¾İ
+    // å†…å­˜ä¸­ä¿®æ”¹æ•°æ®
     for (auto pair : _components)
     {
         auto pPlayerComponent = dynamic_cast<PlayerComponent*>(pair.second);
@@ -92,10 +91,10 @@ void Player::ParserFromProto(const uint64 playerSn, const Proto::Player& proto)
 
 void Player::SerializeToProto(Proto::Player* pProto) const
 {
-    // »ù´¡Êı¾İ
+    // åŸºç¡€æ•°æ®
     pProto->CopyFrom(_player);
 
-    // ÄÚ´æÖĞĞŞ¸ÄÊı¾İ
+    // å†…å­˜ä¸­ä¿®æ”¹æ•°æ®
     for (auto pair : _components)
     {
         auto pPlayerComponent = dynamic_cast<PlayerComponent*>(pair.second);

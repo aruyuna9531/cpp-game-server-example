@@ -1,9 +1,9 @@
 #pragma once
 
 #include <climits>
-#include "protobuf/proto_id.pb.h"
-#include "protobuf/db.pb.h"
-#include "protobuf/msg.pb.h"
+#include "../../protobuf/proto_id.pb.h"
+#include "../../protobuf/db.pb.h"
+#include "../../protobuf/msg.pb.h"
 
 #ifndef PATH_MAX  
 #define PATH_MAX 1024  

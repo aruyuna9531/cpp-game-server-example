@@ -138,6 +138,11 @@ bool AABB3::contains(const Vector3& p) const {
     return (p.x >= min.x) && (p.x <= max.x) && (p.y >= min.y) && (p.y <= max.y) && (p.z >= min.z) && (p.z <= max.z);
 }
 
+// 自身包含了入参AABB（含相等）
+bool AABB3::contains(const AABB3& aabb) const {
+    return aabb.min.x >= min.x && aabb.max.x <= max.x && aabb.min.y >= min.y && aabb.max.y <= max.y && aabb.min.z >= min.z && aabb.max.z <= max.z;
+}
+
 // p点距离AABB最近的点
 Vector3 AABB3::closestPointTo(const Vector3& p) const {
     Vector3 r;

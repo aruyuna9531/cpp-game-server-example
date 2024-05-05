@@ -1,5 +1,6 @@
 #include "move_system.h"
 #include "move_component.h"
+#include "collider_component.h"
 #include "libserver/entity_system.h"
 #include "libplayer/player.h"
 #include "libplayer/player_component_last_map.h"
@@ -32,10 +33,14 @@ void MoveSystem::Update(EntitySystem* pEntities)
         auto pMoveComponent = dynamic_cast<MoveComponent*>(iter->second);
         auto pPlayer = pMoveComponent->GetParent<Player>();
 
-        if (pMoveComponent->Update(timeElapsed, pPlayer->GetComponent<PlayerComponentLastMap>(), 2))
+        auto pLastMap = pPlayer->GetComponent<PlayerComponentLastMap>();
+        if (pMoveComponent->Update(timeElapsed, pLastMap, 2))
         {
             // 停下来了，移除MoveComponent
             pPlayer->RemoveComponent<MoveComponent>();
         }
+        // 更新collider
+        auto pCol = pPlayer->GetComponent<ColliderComponent>();
+        pCol->RefreshAABB(pLastMap->GetCur()->Position);
     }
 }

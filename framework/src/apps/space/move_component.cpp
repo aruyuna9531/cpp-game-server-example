@@ -27,7 +27,7 @@ void MoveComponent::BackToPool()
 		_targets.pop();
 }
 
-// 实体更新移动轨迹
+// 实体更新移动轨迹（两个值都是客户端传的）
 void MoveComponent::Update(std::queue<Vector3> targets, Vector3 curPosition)
 {
 	if (targets.empty())

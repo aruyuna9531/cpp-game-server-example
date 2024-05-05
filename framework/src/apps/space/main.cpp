@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 
     auto pThreadMgr = ThreadMgr::GetInstance();
 
-    // È«¾Ö
+    // å…¨å±€
     pThreadMgr->GetEntitySystem()->AddComponent<ResourceManager>();
 
     InitializeComponentSpace(pThreadMgr);

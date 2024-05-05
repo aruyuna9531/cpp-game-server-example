@@ -25,7 +25,7 @@ LuaVm::LuaVm() {
                                  "_G.io = nil\n"
                                  "_G.debug = nil\n";
 
-    LuaL_dostring(L, sandbox_env);
+    luaL_dostring(luaState, sandbox_env);
 
     lua_getglobal(luaState, "OnInit");  // 调用lua文件的全局函数OnInit
     lua_pushinteger(luaState, id);

@@ -6,6 +6,7 @@
 #include "libserver/message_system.h"
 #include "libplayer/player_component_last_map.h"
 #include "move_component.h"
+#include "collider_component.h"
 
 void World::Awake(int worldId)
 {
@@ -171,6 +172,10 @@ void World::HandleSyncPlayer(Packet* pPacket)
     pComponentLastMap->EnterWorld(_worldId, _sn);
     const auto pLastMap = pComponentLastMap->GetCur();
 
+    const auto pCollider = pPlayer->AddComponent<ColliderComponent>();
+    pCollider->SetSize({1,1,1});  // TODO
+    pCollider->RefreshAABB(pLastMap->Position);
+
     LOG_DEBUG("world. recv teleport. map id:" << _worldId << " world sn:" << GetSN() << " playerSn:" << pPlayer->GetPlayerSN());
 
     //通知客户端进入地图
@@ -260,6 +265,9 @@ void World::HandleMove(Player* pPlayer, Packet* pPacket)
 
     const auto pComponentLastMap = pPlayer->GetComponent<PlayerComponentLastMap>();
     pMoveComponent->Update(pos, pComponentLastMap->GetCur()->Position);
+    
+    const auto pColliderComponent = pPlayer->GetComponent<ColliderComponent>();
+    pColliderComponent->RefreshAABB(pComponentLastMap->GetCur()->Position);
 
     BroadcastPacket(Proto::MsgId::S2C_Move, proto);
 }
