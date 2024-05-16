@@ -25,7 +25,7 @@ private:
     void HandleBroadcastCreateWorldProxy(Packet* pPacket);
     void HandleTeleportAfter(Player* pPlayer, Packet* pPacket);
 
-    // 进入公共地图
+    // 杩涘叆鍏叡鍦板浘
     void EnterPublicWorld(Player* pPlayer);
 
 private:

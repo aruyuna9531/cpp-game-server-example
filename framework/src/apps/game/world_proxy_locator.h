@@ -22,9 +22,9 @@ private:
 	std::mutex _lock;
 
 	// <world id, world sn>
-	std::map<int, uint64> _publics; // 公共地图
+	std::map<int, uint64> _publics; // 鍏叡鍦板浘
 
 	// <world sn>
-	std::set<uint64> _worlds;  // 副本只存sn
+	std::set<uint64> _worlds;  // 鍓湰鍙瓨sn
 };
 

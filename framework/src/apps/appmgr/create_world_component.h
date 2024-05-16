@@ -25,9 +25,9 @@ private:
 	std::map<int, int> _creating;
 
 	// <world id, world sn>
-	std::map<int, uint64> _created;  // ´´½¨µÄ¹«¹²µØÍ¼ĞÅÏ¢
+	std::map<int, uint64> _created;  // åˆ›å»ºçš„å…¬å…±åœ°å›¾ä¿¡æ¯
 
 	// <world sn, world id>
-	std::map<uint64, int> _dungeons;	// ´´½¨µÄ¸±±¾µØÍ¼
+	std::map<uint64, int> _dungeons;	// åˆ›å»ºçš„å‰¯æœ¬åœ°å›¾
 };
 

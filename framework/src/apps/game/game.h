@@ -14,7 +14,7 @@ inline void InitializeComponentGame(ThreadMgr* pThreadMgr)
     pThreadMgr->CreateComponent<WorldProxyGather>();
     pThreadMgr->CreateComponent<RedisGame>();
 
-    // È«¾Ö
+    // å…¨å±€
     pThreadMgr->GetEntitySystem()->AddComponent<WorldProxyLocator>();
     pThreadMgr->GetEntitySystem()->AddComponent<SpaceSyncHandler>();
     pThreadMgr->GetEntitySystem()->AddComponent<SocketLocator>();

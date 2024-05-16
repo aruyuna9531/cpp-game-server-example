@@ -24,7 +24,7 @@ namespace strutil
         return std::string(it, rit.base());
     }
 
-    // ×Ö·û´®Ìæ»»
+    // å­—ç¬¦ä¸²æ›¿æ¢
     inline int replace(std::string& str, const std::string& pattern, const std::string& newpat) {
         int count = 0;
         const size_t nsize = newpat.size();

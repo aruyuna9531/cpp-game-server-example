@@ -42,6 +42,6 @@ private:
     std::mutex _lock;
     std::map <TraceType, std::map<int, TraceDetail>> _traces;
 
-    // player¶ÔÓ¦µÄsocket
+    // playerå¯¹åº”çš„socket
     std::map<std::string, std::set<SOCKET>> _accounts;
 };

@@ -27,7 +27,7 @@ private:
     void HandleC2GEnterWorld(Player* pPlayer, Packet* pPacket);
     void HandleS2GSyncPlayer(Player* pPlayer, Packet* pPacket);
 
-    // 协议默认处理函数
+    // 鍗忚榛樿澶勭悊鍑芥暟
     void HandleDefaultFunction(Packet* pPacket);
 
 private:

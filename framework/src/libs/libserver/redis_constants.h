@@ -1,15 +1,15 @@
 #pragma once
 
-// redis ¹Ø½¡×Ö
+// redis å…³å¥å­—
 
-// µÇÂ¼ Token
+// ç™»å½• Token
 #define RedisKeyAccountTokey  "engine::token::"
 #define RedisKeyAccountTokeyTimeout  2 * 60
 
-// ½ÇÉ«µÇÂ¼
+// è§’è‰²ç™»å½•
 #define RedisKeyAccountOnlineLogin  "engine::online::login::"
 #define RedisKeyAccountOnlineLoginTimeout  6 * 60
 
-// ½ÇÉ«ÔÚÏß
+// è§’è‰²åœ¨çº¿
 #define RedisKeyAccountOnlineGame  "engine::online::game::"
 #define RedisKeyAccountOnlineGameTimeout  6 * 60

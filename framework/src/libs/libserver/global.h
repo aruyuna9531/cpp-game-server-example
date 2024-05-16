@@ -14,7 +14,7 @@ public:
     void UpdateTime();
 
     static int GetAppIdFromSN(uint64 sn);
-    uint64 GenerateSN();	// SN = 64Î»,Ê±¼ä+·şÎñÆ÷ID+ticket
+    uint64 GenerateSN();	// SN = 64ä½,æ—¶é—´+æœåŠ¡å™¨ID+ticket
     static std::string GenerateUUID();
 
     APP_TYPE GetCurAppType() const;

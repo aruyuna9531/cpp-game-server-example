@@ -9,7 +9,7 @@ public:
 	void Awake() override;
 	void BackToPool() override;
 
-	bool GetSpaceApp(AppInfo* pInfo); // 得到一个当前最优的AppId
+	bool GetSpaceApp(AppInfo* pInfo); // 寰楀埌涓�涓綋鍓嶆渶浼樼殑AppId
 
 protected:
     void HandleAppInfoSync(Packet* pPacket);

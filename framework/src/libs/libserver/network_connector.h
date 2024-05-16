@@ -42,7 +42,7 @@ public:
     bool Connect(ConnectDetail* pDetail);
 
 private:
-    void HandleNetworkConnect(Packet* pPacket);  // ÇëÇóÒ»¸öconnector
+    void HandleNetworkConnect(Packet* pPacket);  // è¯·æ±‚ä¸€ä¸ªconnector
     void CreateConnector(APP_TYPE appType, int appId, std::string ip, int port);
 
 private:

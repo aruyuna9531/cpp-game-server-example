@@ -4,21 +4,21 @@ enum class RobotStateType
 {
     None = -1,
 
-    Http_Connecting = 0,   // http请求
+    Http_Connecting = 0,   // http璇锋眰
     Http_Connected,		// 
 
-    Login_Connecting,	    // 正在链接 Login
-    Login_Connected,	    // 链接成功
-    Login_Logined,          // 登录成功
+    Login_Connecting,	    // 姝ｅ湪閾炬帴 Login
+    Login_Connected,	    // 閾炬帴鎴愬姛
+    Login_Logined,          // 鐧诲綍鎴愬姛
 
-    //Login_CreatePlayer,   // 创建角色
-    Login_SelectPlayer,      // 选择角色
+    //Login_CreatePlayer,   // 鍒涘缓瑙掕壊
+    Login_SelectPlayer,      // 閫夋嫨瑙掕壊
 
-    Game_Connecting,	    // 正在链接 Game
-    Game_Connected,	    // 链接成功
-    Game_Logined,           // 登录成功
+    Game_Connecting,	    // 姝ｅ湪閾炬帴 Game
+    Game_Connected,	    // 閾炬帴鎴愬姛
+    Game_Logined,           // 鐧诲綍鎴愬姛
 
-    Space_EnterWorld,       // 进入地图
+    Space_EnterWorld,       // 杩涘叆鍦板浘
 
     End,
 };

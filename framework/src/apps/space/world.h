@@ -28,7 +28,7 @@ private:
     void SyncAppearTimer();
 
 private:
-    // »º´æ1ÃëÄÚÔö¼Ó»òÊÇÉ¾³ıµÄÍæ¼Ò
+    // ç¼“å­˜1ç§’å†…å¢åŠ æˆ–æ˜¯åˆ é™¤çš„ç©å®¶
     std::set<uint64> _addPlayer;
 };
 

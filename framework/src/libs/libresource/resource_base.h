@@ -14,14 +14,14 @@ public:
 
 	bool LoadProperty(const std::string line);
 
-	// ¼ì²éÃ¿ĞĞÊı¾İ
+	// æ£€æŸ¥æ¯è¡Œæ•°æ®
 	virtual bool Check() = 0;
 
 	static std::vector<std::string> ParserLine(std::string line);
 
 protected:
 
-	// Éú³ÉÄÚ´æ½á¹¹
+	// ç”Ÿæˆå†…å­˜ç»“æ„
 	virtual void GenStruct() = 0;
 
 	std::string GetString(std::string name);

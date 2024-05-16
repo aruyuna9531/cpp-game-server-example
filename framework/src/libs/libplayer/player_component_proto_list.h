@@ -6,7 +6,7 @@
 
 #include <sstream>
 
-// player 组件，处理PlayerList
+// player 缁勪欢锛屽鐞哖layerList
 class PlayerComponentProtoList :public Component<PlayerComponentProtoList>, public IAwakeFromPoolSystem<>
 {
 public:

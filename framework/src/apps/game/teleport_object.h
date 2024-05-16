@@ -2,9 +2,9 @@
 #include "libserver/component.h"
 #include "libserver/system.h"
 
-// ��ת�������
-// 1,��ת��Ҫ�ȴ�Ŀ���ͼ�������
-// 2,��ת��Ҫ�ȴ�������ݴ���ʵ��ͼ��ͬ��
+// 跳转相关数据
+// 1,跳转需要等待目标地图创建完成
+// 2,跳转需要等待玩家数据从真实地图中同步
 
 enum class TeleportFlagType
 {

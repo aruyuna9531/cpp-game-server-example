@@ -10,7 +10,7 @@
 #define DynamicStateBind(classname) \
     reinterpret_cast<CreateIstancePt>( &( classname::CreateState ) )
 
-// T Îª¹ÜÀí×´Ì¬µÄÀà
+// T ä¸ºç®¡ç†çŠ¶æ€çš„ç±»
 template<typename enumType, class T>
 class StateTemplate {
 public:
@@ -49,7 +49,7 @@ public:
 
     void ChangeState(enumType stateType) {
 
-        // ×´Ì¬ÏàÍ¬£¬²»´¦Àí
+        // çŠ¶æ€ç›¸åŒï¼Œä¸å¤„ç†
         if (_pState != nullptr && _pState->GetState() == stateType)
         {
             LOG_ERROR("ChangeState: same state type:" << GetRobotStateTypeShortName(stateType));
@@ -87,7 +87,7 @@ protected:
     virtual void RegisterState() = 0;
 
     ///////////////////////////////////////////////////////////////////////////////////
-    // ´´½¨×´Ì¬Àà
+    // åˆ›å»ºçŠ¶æ€ç±»
 public:
     typedef StateClass* (*CreateIstancePt)();
 
