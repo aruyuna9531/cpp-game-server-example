@@ -28,6 +28,7 @@ public:
     TagValue TValue;
 };
 
+// networkConnector 网络连接类（自身作为客户端）
 class NetworkConnector :
     public Network,
     public IAwakeSystem<int, int>

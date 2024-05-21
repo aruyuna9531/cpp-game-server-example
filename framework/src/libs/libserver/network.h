@@ -91,7 +91,7 @@ protected:
     fd_set readfds, writefds, exceptfds;
 #endif
 
-    // ·¢ËÍĞ­Òé
+    // å‘é€åè®®
     std::mutex _sendMsgMutex;
     CacheSwap<Packet> _sendMsgList;
 

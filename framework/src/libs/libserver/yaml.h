@@ -25,6 +25,7 @@ struct CommonConfig : public AppConfig
     std::string Ip{ "127.0.0.1" };
     int Port{ 6661 };
     int HttpPort{ 5051 };
+    int ConsolePort{ 10000 };
 };
 
 struct AppListForOneConfig : public CommonConfig

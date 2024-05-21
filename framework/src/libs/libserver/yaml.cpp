@@ -127,6 +127,9 @@ void Yaml::LoadConfig(const APP_TYPE appType, YAML::Node& config)
 
         if (node["http_port"])
             pCommon->HttpPort = node["http_port"].as<int>();
+
+        if (node["console_port"])
+            pCommon->ConsolePort = node["console_port"].as<int>();
     }
 
     const auto pAppConfig = dynamic_cast<AppConfig*>(pYamlConfig);

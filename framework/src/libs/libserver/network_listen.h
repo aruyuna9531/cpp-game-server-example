@@ -2,6 +2,7 @@
 
 #include "network.h"
 
+// networkListen 网络监听类（自身作为服务器）
 class NetworkListen :public Network,
     virtual public IAwakeSystem<std::string, int>,
     virtual public IAwakeSystem<int, int>
