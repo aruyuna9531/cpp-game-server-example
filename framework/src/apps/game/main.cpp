@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
     pThreadMgr->CreateComponent<NetworkListen>(ListenThread, false, (int)pGlobal->GetCurAppType(), (int)pGlobal->GetCurAppId());
 
     // connector
-    pThreadMgr->CreateComponent<NetworkConnector>(ConnectThread, false,( int)NetworkType::TcpConnector, (int)(APP_APPMGR | APP_DB_MGR | APP_SPACE));
+    pThreadMgr->CreateComponent<NetworkConnector>(ConnectThread, false,(int)NetworkType::TcpConnector, (int)(APP_APPMGR | APP_DB_MGR | APP_SPACE));
 
     app.Run();
     app.Dispose();

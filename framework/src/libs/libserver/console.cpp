@@ -52,8 +52,6 @@ void ConsoleCmd::Process(std::vector<std::string>& params)
     iter->second(params);
 }
 
-///////////////////////////////////////////////////////////////////
-
 void Console::Awake()
 {
     _thread = std::thread([this]()

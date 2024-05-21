@@ -3,9 +3,13 @@
 #include "libserver/network_listen.h"
 #include "libserver/network_connector.h"
 
-#include "login.h"
+// #include "login.h"
 #include "libserver/global.h"
 #include "libresource/resource_manager.h"
+
+#include "libserver/thread_mgr.h"
+#include "account.h"
+#include "redis_login.h"
 
 int main(int argc, char* argv[])
 {
@@ -17,10 +21,12 @@ int main(int argc, char* argv[])
 
     auto pThreadMgr = ThreadMgr::GetInstance();
 
-    // È«¾Ö
+    // å…¨å±€
     pThreadMgr->GetEntitySystem()->AddComponent<ResourceManager>();
 
-    InitializeComponentLogin(pThreadMgr);
+    // InitializeComponentLogin(pThreadMgr);
+    pThreadMgr->CreateComponent<Account>();
+    pThreadMgr->CreateComponent<RedisLogin>();
 
     // listen
     pThreadMgr->CreateComponent<NetworkListen>(ListenThread, false, (int)pGlobal->GetCurAppType(), (int)pGlobal->GetCurAppId());

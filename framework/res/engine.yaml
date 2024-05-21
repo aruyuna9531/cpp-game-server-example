@@ -62,7 +62,7 @@ dbmgr:
       ip: 127.0.0.1
       port: 3306
       user: yuna
-      password: 3b9ac9ff
+      password: 123456
       database_name: game
       character_set: utf8
       collation: utf8_general_ci

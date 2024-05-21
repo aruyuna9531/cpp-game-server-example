@@ -1,6 +1,7 @@
 build/
 !./build/build.sh
 !./build/proto_code.sh
+framework/res/engine.yaml
 
 framework/bin/
 framework/log/
@@ -16,5 +17,4 @@ framework/src/tools/robots/CMakeFiles/
 framework/src/tools/robots/cmake_install.cmake
 framework/src/tools/robots/CMakeCache.txt
 framework/src/tools/robots/Makefile
-
 dependence/*/
